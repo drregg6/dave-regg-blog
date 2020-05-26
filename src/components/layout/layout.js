@@ -7,9 +7,11 @@ import Footer from './footer';
 const Layout = ({ children }) => {
   return (
     <div className={styles.container}>
-      <Header />
-      <div className="main">
-        {children}
+      <div className={styles.content}>
+        <Header />
+        <div className={styles.main}>
+          {children}
+        </div>
       </div>
       <Footer />
     </div>

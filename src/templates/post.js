@@ -2,6 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
+import Head from '../components/meta/head';
 import Layout from '../components/layout/layout';
 
 export const query = graphql`
@@ -43,6 +44,7 @@ const Post = ({ data }) => {
   }
   return (
     <Layout>
+      <Head title={title} />
       <img src={splashImage.fixed.src} alt="" />
       <h1>{ title }</h1>
       <small>Published on { publishedDate } by { author }</small>

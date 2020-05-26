@@ -5,6 +5,7 @@ import {
   Link
 } from 'gatsby';
 
+import Head from '../components/meta/head';
 import Layout from '../components/layout/layout';
 
 const Blog = () => {
@@ -25,6 +26,7 @@ const Blog = () => {
   `);
   return (
     <Layout>
+      <Head title='Blog' />
       <h1>Hey there, from Blog!</h1>
       {
         data.allContentfulBlogPost.edges.map(({ node }) => {

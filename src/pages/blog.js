@@ -17,6 +17,7 @@ const Blog = () => {
             publishedDate(formatString: "DD MMM YYYY")
             slug
             title
+            description
           }
         }
       }
@@ -27,12 +28,13 @@ const Blog = () => {
       <h1>Hey there, from Blog!</h1>
       {
         data.allContentfulBlogPost.edges.map(({ node }) => {
-          const { title, author, slug, publishedDate } = node;
+          const { title, author, slug, publishedDate, description } = node;
           return (
             <div>
               <Link to={`/blog/${slug}`}>
                 <h1>{title}</h1>
                 <small>Published on {publishedDate} by {author}</small>
+                <p>{description}</p>
               </Link>
             </div>
           )

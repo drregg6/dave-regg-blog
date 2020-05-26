@@ -17,12 +17,21 @@ export const query = graphql`
       body {
         json
       }
+      splashImage {
+        fixed(width: 960) {
+          src
+          srcSet
+          width
+          height
+        }
+      }
     }
   }
 `;
 
 const Post = ({ data }) => {
-  const { title, author, publishedDate, body } = data.contentfulBlogPost;
+  const { title, author, publishedDate, body, splashImage } = data.contentfulBlogPost;
+  console.log(splashImage)
   const options = {
     renderNode: {
       "embedded-asset-block": (node) => {
@@ -34,6 +43,7 @@ const Post = ({ data }) => {
   }
   return (
     <Layout>
+      <img src={splashImage.fixed.src} alt="" />
       <h1>{ title }</h1>
       <small>Published on { publishedDate } by { author }</small>
       { documentToReactComponents(body.json, options) }

@@ -15,10 +15,11 @@ const Footer = () => {
       }
     }
   `);
+  const { author } = data.site.siteMetadata;
   return (
     <footer className={styles.footer}>
       <p>
-        Copyright <a href="http://www.daveregg.com" rel="noopener noreferrer" target="_blank">{data.site.siteMetadata.author}</a>
+        Copyright <a href="http://www.daveregg.com" rel="noopener noreferrer" target="_blank">{author}</a>
       </p>
     </footer>
   )

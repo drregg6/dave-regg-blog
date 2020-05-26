@@ -7,7 +7,7 @@ import styles from './header.module.scss'
 
 import Nav from './nav';
 
-const Header = (props) => {
+const Header = () => {
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -17,9 +17,10 @@ const Header = (props) => {
       }
     }
   `);
+  const { title } = data.site.siteMetadata;
   return (
     <header className={styles.header}>
-      <h1>{data.site.siteMetadata.title}</h1>
+      <h1>{ title }</h1>
       <Nav />
     </header>
   )

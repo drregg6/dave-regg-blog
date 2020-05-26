@@ -13,5 +13,11 @@
 
 .main {
   margin: 5rem auto;
-  width: 960px;
+  max-width: 960px;
+}
+
+@media only screen and (max-width: 520px) {
+  .main {
+    width: 100vw;
+  }
 }

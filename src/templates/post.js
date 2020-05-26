@@ -1,6 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import styles from './post.module.scss';
 
 import Head from '../components/meta/head';
 import Layout from '../components/layout/layout';
@@ -45,10 +46,16 @@ const Post = ({ data }) => {
   return (
     <Layout>
       <Head title={title} />
-      <img src={splashImage.fixed.src} alt="" />
-      <h1>{ title }</h1>
-      <small>Published on { publishedDate } by { author }</small>
-      { documentToReactComponents(body.json, options) }
+      <div className={styles.img}>
+        <img src={splashImage.fixed.src} alt="" />
+      </div>
+      <div className={styles.head}>
+        <h1>{ title }</h1>
+        <small>Published on { publishedDate } by { author }</small>
+      </div>
+      <div className={styles.body}>
+        { documentToReactComponents(body.json, options) }
+      </div>
     </Layout>
   )
 }

@@ -1,0 +1,28 @@
+.head {
+  margin: 2.5rem 0;
+}
+
+.body {
+  line-height: 1.2;
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: 1rem;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .head {
+    margin: 2.5rem 1rem;
+  }
+  .body {
+    padding: 0 1.2rem;
+    p {
+      text-align: justify;
+    }
+  }
+}

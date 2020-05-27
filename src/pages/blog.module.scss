@@ -1,0 +1,20 @@
+.posts {
+  list-style: none;
+  padding: 0;
+}
+
+.post {
+  margin: 2.5rem 0;
+
+  a {
+    display: block;
+    border: 1px solid black;
+    padding: 1rem;
+  }
+  h1 {
+    margin-bottom: .75rem;
+  }
+  p {
+    margin-top: .75rem;
+  }
+}

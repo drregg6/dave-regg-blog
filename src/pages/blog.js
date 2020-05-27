@@ -4,6 +4,7 @@ import {
   useStaticQuery,
   Link
 } from 'gatsby';
+import styles from './blog.module.scss';
 
 import Head from '../components/meta/head';
 import Layout from '../components/layout/layout';
@@ -27,21 +28,24 @@ const Blog = () => {
   return (
     <Layout>
       <Head title='Blog' />
-      <h1>Hey there, from Blog!</h1>
-      {
-        data.allContentfulBlogPost.edges.map(({ node }) => {
-          const { title, author, slug, publishedDate, description } = node;
-          return (
-            <div>
-              <Link to={`/blog/${slug}`}>
-                <h1>{title}</h1>
-                <small>Published on {publishedDate} by {author}</small>
-                <p>{description}</p>
-              </Link>
-            </div>
-          )
-        })
-      }
+      <ol className={styles.posts}>
+        {
+          data.allContentfulBlogPost.edges.map(({ node }) => {
+            const { title, author, slug, publishedDate, description } = node;
+            return (
+              <li className={styles.post} key={node.id}>
+                <Link to={`/blog/${slug}`} className={styles.post} key={node.id}>
+                  <h1>{title}</h1>
+                  <small>Published on {publishedDate} by {author}</small>
+                  {
+                    description && <p>{description}</p>
+                  }
+                </Link>
+              </li>
+            )
+          })
+        }
+      </ol>
     </Layout>
   )
 }

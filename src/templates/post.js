@@ -33,7 +33,6 @@ export const query = graphql`
 
 const Post = ({ data }) => {
   const { title, author, publishedDate, body, splashImage } = data.contentfulBlogPost;
-  console.log(splashImage)
   const options = {
     renderNode: {
       "embedded-asset-block": (node) => {
@@ -46,9 +45,13 @@ const Post = ({ data }) => {
   return (
     <Layout>
       <Head title={title} />
-      <div className={styles.img}>
-        <img src={splashImage.fixed.src} alt="" />
-      </div>
+      {
+        splashImage && (
+          <div className={styles.img}>
+            <img src={splashImage.fixed.src} alt="" />
+          </div>
+        )
+      }
       <div className={styles.head}>
         <h1>{ title }</h1>
         <small>Published on { publishedDate } by { author }</small>

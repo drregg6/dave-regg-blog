@@ -12,7 +12,7 @@ import Layout from '../components/layout/layout';
 export default function Home() {
   const data = useStaticQuery(graphql`
     query {
-      allContentfulBlogPost(limit: 3, sort: {fields: createdAt, order: DESC}) {
+      allContentfulBlogPost(limit: 5, sort: {fields: createdAt, order: DESC}) {
         edges {
           node {
             author
@@ -49,7 +49,7 @@ export default function Home() {
                 >
                   <div>
                     <h1>{node.title}</h1>
-                    <small>{node.author}</small>
+                    <small>Posted by {node.author}</small>
                   </div>
                 </div>
               </Link>

@@ -49,7 +49,7 @@ export default function Home() {
                 >
                   <div>
                     <h1>{node.title}</h1>
-                    <small>Posted by {node.author}</small>
+                    <small>Published on {node.publishedDate}</small>
                   </div>
                 </div>
               </Link>

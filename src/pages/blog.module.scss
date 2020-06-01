@@ -1,11 +1,20 @@
+.categories {
+  h2 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  float: right;
+  padding: 1rem;
+  border: 2px double black;
+}
+
 .posts {
   list-style: none;
   padding: 0;
 }
 
 .post {
-  padding: 2rem 0;
-  // border-bottom: 2px solid black;
+  padding: .5rem 0;
 
   a {
     display: block;

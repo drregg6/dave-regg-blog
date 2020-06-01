@@ -7,47 +7,21 @@
   justify-content: center;
 }
 
+.readMore {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #8a8a8a;
+  transition: .15s background;
+
+  &:hover {
+    background: #a8a8a8;
+  }
+}
+
 @media only screen and (max-width: 520px) {
   .cards {
     display: flex;
     flex-direction: column;
   }
 }
-
-// .cards {
-//   display: grid;
-//   grid-template-columns: 1fr 1fr;
-//   grid-template-rows: 1fr 1fr;
-//   row-gap: 2.5rem;
-//   justify-items: center;
-// }
-// .card {
-//   border: 1px solid black;
-//   border-radius: 15px;
-//   width: 400px;
-//   height: 300px;
-
-//   background-size: cover;
-//   background-position: center;
-//   background-repeat: no-repeat;
-//   background-color: rgba(255,255,255,.5);
-//   background-blend-mode: normal;
-
-//   display: flex;
-//   justify-content: center;
-//   align-items: flex-end;
-
-//   div {
-//     border-bottom-left-radius: 15px;
-//     border-bottom-right-radius: 15px;
-//     box-shadow: 0 -1px 2.5px 0 rgba(63,63,63,0.5);
-//     text-align: center;
-//     background: white;
-//     width: 100%;
-//     padding: .5rem 0;
-//   }
-
-//   &:hover {
-//     background-blend-mode: lighten;
-//   }
-// }

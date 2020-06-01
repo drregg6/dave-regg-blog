@@ -13,7 +13,8 @@ TODO:
 import React from 'react';
 import {
   graphql,
-  useStaticQuery
+  useStaticQuery,
+  Link
 } from 'gatsby';
 import styles from './index.module.scss';
 
@@ -67,6 +68,9 @@ export default function Home() {
             )
           })
         }
+        <Link to="/blog" className={styles.readMore}>
+          Check out earlier posts
+        </Link>
       </div>
     </Layout>
   )

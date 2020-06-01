@@ -32,10 +32,18 @@ const Footer = () => {
             Get in Contact
           </h2>
           <ul className={`${styles.contact} ${styles.list}`}>
-            <li>Personal Website</li>
-            <li>Twitter</li>
-            <li>LinkedIn</li>
-            <li>Github</li>
+            <li>
+              <a href="http://www.daveregg.com" target="_blank" rel="noopener noreferrer"><i class="fas fa-desktop"></i></a>
+            </li>
+            <li>
+              <a href="https://www.twitter.com/daveregg" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter-square"></i></a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/daveregg" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+            </li>
+            <li>
+              <a href="https://github.com/drregg6" target="_blank" rel="noopener noreferrer"><i class="fab fa-github-square"></i></a>
+            </li>
           </ul>
         </div>
         <div>

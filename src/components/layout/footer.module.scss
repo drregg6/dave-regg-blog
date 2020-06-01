@@ -24,6 +24,28 @@
         padding: .5rem 2rem;
         border: 2px double white;
       }
+
+      .list {
+        li {
+          margin-bottom: .5rem;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      .contact {
+        display: flex;
+        justify-content: space-around;
+
+        li {
+          font-size: 2rem;
+
+          a {
+            color: black;
+          }
+        }
+      }
     }
   }
 

@@ -14,6 +14,14 @@
     justify-content: center;
     font-size: .75rem;
 
+    .about {
+      img {
+        float: left;
+        padding: .5rem;
+        border-radius: 50%;
+      }
+    }
+
     div {
       width: 25vw;
 
@@ -23,15 +31,6 @@
         font-size: 1rem;
         padding: .5rem 2rem;
         border: 2px double white;
-      }
-
-      .list {
-        li {
-          margin-bottom: .5rem;
-          &:last-child {
-            margin-bottom: 0;
-          }
-        }
       }
 
       .contact {
@@ -45,6 +44,10 @@
             color: black;
           }
         }
+      }
+
+      .categories {
+        text-align: center;
       }
     }
   }
@@ -68,6 +71,10 @@
 
       div {
         width: 90vw;
+      }
+
+      .categoryDiv {
+        order: -1;
       }
     }
 

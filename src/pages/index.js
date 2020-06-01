@@ -8,8 +8,7 @@ TODO:
 = Category functionality
     - Organize by category
 = Categories on Blog Page
-= Footer Contact images
-= Footer About Me image
+= Universal styles
 
 DOWN THE LINE:
 = Keywords functionality

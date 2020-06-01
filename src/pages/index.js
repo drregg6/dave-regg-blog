@@ -1,6 +1,7 @@
 /*
 
 https://gooyaabitemplates.com/flamingo-blogger-template-2/
+https://www.gatsbyjs.org/docs/adding-pagination/
 
 TODO:
 = Blog Page styles
@@ -61,9 +62,9 @@ export default function Home() {
             const { id, author, slug, publishedDate, title, category, description } = node;
             return (
               <Card
+                key={id}
                 id={id}
                 author={author}
-                key={id}
                 slug={slug}
                 publishedDate={publishedDate}
                 title={title}

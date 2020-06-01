@@ -1,5 +1,8 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import {
+  graphql,
+  Link
+} from 'gatsby';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import styles from './post.module.scss';
 
@@ -57,6 +60,14 @@ const Post = ({ data }) => {
       </div>
       <div className={styles.body}>
         { documentToReactComponents(body.json, options) }
+      </div>
+      <div className={styles.postLinks}>
+        <div>
+          <Link to="/blog" className={styles.last}>Last Post</Link>
+        </div>
+        <div>
+          <Link to="/blog" className={styles.next}>Next Post</Link>
+        </div>
       </div>
     </Layout>
   )

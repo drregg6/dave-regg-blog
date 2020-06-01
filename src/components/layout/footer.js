@@ -38,16 +38,16 @@ const Footer = () => {
           </h2>
           <ul className={`${styles.contact} ${styles.list}`}>
             <li>
-              <a href="http://www.daveregg.com" target="_blank" rel="noopener noreferrer"><i class="fas fa-desktop"></i></a>
+              <a href="http://www.daveregg.com" target="_blank" rel="noopener noreferrer"><i className="fas fa-desktop"></i></a>
             </li>
             <li>
-              <a href="https://www.twitter.com/daveregg" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter-square"></i></a>
+              <a href="https://www.twitter.com/daveregg" target="_blank" rel="noopener noreferrer"><i className="fab fa-twitter-square"></i></a>
             </li>
             <li>
-              <a href="https://www.linkedin.com/in/daveregg" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+              <a href="https://www.linkedin.com/in/daveregg" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin"></i></a>
             </li>
             <li>
-              <a href="https://github.com/drregg6" target="_blank" rel="noopener noreferrer"><i class="fab fa-github-square"></i></a>
+              <a href="https://github.com/drregg6" target="_blank" rel="noopener noreferrer"><i className="fab fa-github-square"></i></a>
             </li>
           </ul>
         </div>

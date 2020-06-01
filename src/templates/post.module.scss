@@ -15,6 +15,21 @@
   }
 }
 
+.postLinks {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2.5rem;
+
+  .next {
+    padding: 1rem;
+    background: yellow;
+  }
+  .last {
+    padding: 1rem;
+    background: salmon;
+  }
+}
+
 @media only screen and (max-width: 520px) {
   .head {
     margin: 2.5rem 1rem;
@@ -23,5 +38,8 @@
     p {
       text-align: justify;
     }
+  }
+  .postLinks {
+    flex-direction: column;
   }
 }

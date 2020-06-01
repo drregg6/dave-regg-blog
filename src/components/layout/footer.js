@@ -18,33 +18,31 @@ const Footer = () => {
   const { author } = data.site.siteMetadata;
   return (
     <footer className={styles.footer}>
+      <h2 className={styles.header}>
+        About Me
+      </h2>
+      <h2 className={styles.header}>
+        Blog Categories
+      </h2>
+      <h2 className={styles.header}>
+        Get in Contact
+      </h2>
       <div className={styles.content}>
-        <div>
-          <h2>About Me</h2>
-          <p>
-            I am a programmer from Philadelphia. Read about my life, projects, and hobbies on my blog, or check out my portfolio on my personal website.
-          </p>
-        </div>
-        <div>
-          <h2>Blog Categories</h2>
-          <ul>
-            <li>Programming</li>
-            <li>Meta</li>
-            <li>Work</li>
-            <li>Mental Health</li>
-            <li>Other Hobbies</li>
-          </ul>
-        </div>
-        <div>
-          <h2>Get in Contact</h2>
-          <ul>
-            <li>Personal Website</li>
-            <li>Twitter</li>
-            <li>LinkedIn</li>
-            <li>Github</li>
-          </ul>
-        </div>
+        I am a programmer from Philadelphia. Read about my life, projects, and hobbies on my blog, or check out my portfolio on my personal website.
       </div>
+      <ul className={styles.content}>
+        <li>Programming</li>
+        <li>Meta</li>
+        <li>Work</li>
+        <li>Mental Health</li>
+        <li>Other Hobbies</li>
+      </ul>
+      <ul className={styles.content}>
+        <li>Personal Website</li>
+        <li>Twitter</li>
+        <li>LinkedIn</li>
+        <li>Github</li>
+      </ul>
       <div className={styles.copyright}>
         <p>
           Copyright &copy; {new Date().getFullYear()} <a href="http://www.daveregg.com" rel="noopener noreferrer" target="_blank">{author}</a>

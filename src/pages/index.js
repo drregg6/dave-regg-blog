@@ -1,3 +1,9 @@
+/*
+
+https://gooyaabitemplates.com/flamingo-blogger-template-2/
+
+*/
+
 import React from 'react';
 import {
   graphql,

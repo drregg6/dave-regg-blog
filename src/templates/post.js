@@ -37,7 +37,7 @@ const Post = ({ data }) => {
     renderNode: {
       "embedded-asset-block": (node) => {
         const alt = node.data.target.fields.title['en-US'];
-        const src = node.data.target.field.field['en-US'].url;
+        const src = node.data.target.fields.file['en-US'].url;
         return <img src={src} alt={alt} />
       }
     }

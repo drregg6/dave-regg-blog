@@ -38,7 +38,7 @@ export default function Home() {
   `)
   console.log(data);
   return (
-    <Layout>
+    <Layout isHome>
       <Head title='Home' />
       <div className={styles.cards}>
         {

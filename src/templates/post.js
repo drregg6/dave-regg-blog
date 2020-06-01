@@ -51,13 +51,6 @@ const Post = ({ data }) => {
   return (
     <Layout src={src} title={title}>
       <Head title={title} />
-      {
-        splashImage && (
-          <div className={styles.img}>
-            <img src={src} alt="" />
-          </div>
-        )
-      }
       <div className={styles.head}>
         <h1>{ title }</h1>
         <small>Published on { publishedDate } by { author }</small>

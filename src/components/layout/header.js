@@ -40,7 +40,7 @@ const Header = (props) => {
         <div>
           <h1>{ title ? title : siteTitle }</h1>
           { isHome && (
-              <Link to="/blog" className={styles.button}>Read more here &rArr;</Link>
+              <Link to="/blog" className={styles.button}>Read more &rArr;</Link>
             )
           }
         </div>

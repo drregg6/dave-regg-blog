@@ -3,10 +3,17 @@
 https://gooyaabitemplates.com/flamingo-blogger-template-2/
 
 TODO:
-= .footer styles for mobile
 = Blog Page styles
 = Blog Page pagination
-= Index Page card styles
+= Category functionality
+    - Organize by category
+= Categories on Blog Page
+= Footer Contact images
+= Footer About Me image
+
+DOWN THE LINE:
+= Keywords functionality
+= Search by keyword
 
 */
 

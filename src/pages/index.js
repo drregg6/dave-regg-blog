@@ -6,19 +6,20 @@ TODO:
 = .footer styles for mobile
 = Blog Page styles
 = Blog Page pagination
+= Index Page card styles
 
 */
 
 import React from 'react';
 import {
   graphql,
-  useStaticQuery,
-  Link
+  useStaticQuery
 } from 'gatsby';
 import styles from './index.module.scss';
 
 import Head from '../components/meta/head';
 import Layout from '../components/layout/layout';
+import Card from '../components/homepage/card';
 
 export default function Home() {
   const data = useStaticQuery(graphql`
@@ -29,6 +30,7 @@ export default function Home() {
             author
             slug
             title
+            category
             publishedDate(formatString: "DD MMM YYYY")
             description
             splashImage {
@@ -49,21 +51,19 @@ export default function Home() {
         {
           data.allContentfulBlogPost.edges.map(({ node }) => {
             const src = node.splashImage ? node.splashImage.fixed.src : 'https://www.placehold.it/400x300';
+            const { id, author, slug, publishedDate, title, category, description } = node;
             return (
-              <Link to={`/blog/${node.slug}`}>
-                <div
-                  key={node.id}
-                  className={styles.card}
-                  style={{
-                    backgroundImage: `url(${src})`
-                  }}
-                >
-                  <div>
-                    <h1>{node.title}</h1>
-                    <small>Published on {node.publishedDate}</small>
-                  </div>
-                </div>
-              </Link>
+              <Card
+                id={id}
+                author={author}
+                key={id}
+                slug={slug}
+                publishedDate={publishedDate}
+                title={title}
+                category={category}
+                description={description}
+                src={src}
+              />
             )
           })
         }

@@ -1,0 +1,64 @@
+.card {
+  width: 25vw;
+
+  &:hover {
+    .image {
+      img {
+        opacity: .7;
+      }
+    }
+  }
+}
+
+.image {
+  position: relative;
+
+  img {
+    width: 360px;
+    height: 256px;
+  }
+}
+
+.category {
+  font-size: .75rem;
+  position: absolute;
+  width: fit-content;
+  bottom: -.75rem;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  
+  border: 3px double black;
+  padding: .5rem 2rem;
+  background: white;
+
+  color: black;
+}
+
+.header {
+  margin: 2rem auto;
+  text-align: center;
+
+  .title {
+    font-size: 1.5rem;
+  }
+  .info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    font-style: italic;
+    font-size: .8rem;
+
+    small {
+      font-size: .8rem;
+      color: #8a8a8a;
+    }
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .card {
+    width: 90vw;
+  }
+}

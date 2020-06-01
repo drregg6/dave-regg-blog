@@ -12,7 +12,7 @@ import Layout from '../components/layout/layout';
 const Blog = () => {
   const data = useStaticQuery(graphql`
     query {
-      allContentfulBlogPost {
+      allContentfulBlogPost(sort: {fields: createdAt, order: DESC}) {
         edges {
           node {
             author

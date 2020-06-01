@@ -42,13 +42,19 @@ const Post = ({ data }) => {
       }
     }
   }
+  let src = '';
+  if (splashImage) {
+    src = splashImage.fixed.src;
+  } else {
+    src = 'https://placekitten.com/g/960/400';
+  }
   return (
-    <Layout>
+    <Layout src={src} title={title}>
       <Head title={title} />
       {
         splashImage && (
           <div className={styles.img}>
-            <img src={splashImage.fixed.src} alt="" />
+            <img src={src} alt="" />
           </div>
         )
       }

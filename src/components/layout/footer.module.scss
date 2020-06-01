@@ -22,12 +22,25 @@
     margin-bottom: 1rem;
   }
 
+  .content {
+    .about {
+      padding: 0 5rem;
+      text-align: justify;
+    }
+    li {
+      margin-bottom: .15rem;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
   .copyright {
     font-size: .6rem;
     text-align: center;
     width: 90vw;
     margin: 0 auto;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
   }
 }
 

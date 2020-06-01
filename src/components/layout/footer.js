@@ -28,7 +28,9 @@ const Footer = () => {
         Get in Contact
       </h2>
       <div className={styles.content}>
-        I am a programmer from Philadelphia. Read about my life, projects, and hobbies on my blog, or check out my portfolio on my personal website.
+        <p className={styles.about}>
+          I am a programmer from Philadelphia. Read about my life, projects, and hobbies on my blog, or check out my portfolio on my personal website.
+        </p>
       </div>
       <ul className={styles.content}>
         <li>Programming</li>

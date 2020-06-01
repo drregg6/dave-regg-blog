@@ -24,7 +24,7 @@ const Header = (props) => {
   return (
     <header className={styles.header}>
       <div className={styles.nav}>
-        <Link to="/" style={{ color: '#000' }}>
+        <Link to="/">
           <h1>{ siteTitle }</h1>
         </Link>
         <Nav />

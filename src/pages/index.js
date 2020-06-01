@@ -2,6 +2,11 @@
 
 https://gooyaabitemplates.com/flamingo-blogger-template-2/
 
+TODO:
+= .footer styles for mobile
+= Blog Page styles
+= Blog Page pagination
+
 */
 
 import React from 'react';

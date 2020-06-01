@@ -4,6 +4,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    a {
+      h1 {
+        color: #000;
+      }
+    }
   }
 
   .hero {

@@ -11,11 +11,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #8a8a8a;
+  border: 2px double black;
+  // background: #8a8a8a;
   transition: .15s background;
 
   &:hover {
-    background: #a8a8a8;
+    background: #f7f7f7;
   }
 }
 

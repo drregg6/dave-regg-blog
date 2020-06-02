@@ -63,10 +63,10 @@ const Post = ({ data }) => {
       </div>
       <div className={styles.postLinks}>
         <div>
-          <Link to="/blog" className={styles.last}>Last Post</Link>
+          <Link to="/blog" className={`${styles.last} ${styles.button}`}>Last Post</Link>
         </div>
         <div>
-          <Link to="/blog" className={styles.next}>Next Post</Link>
+          <Link to="/blog" className={`${styles.next} ${styles.button}`}>Next Post</Link>
         </div>
       </div>
     </Layout>

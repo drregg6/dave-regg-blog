@@ -17,9 +17,10 @@ const Head = ({ title }) => {
     }
   `)
   return (
-    <Helmet
-      title={`${title} | ${data.site.siteMetadata.title}`}
-    />
+    <Helmet>
+      <title>{`${title} | ${data.site.siteMetadata.title}`}</title>
+      <script src="https://kit.fontawesome.com/dfc3b70b57.js" crossorigin="anonymous"></script>
+    </Helmet>
   )
 }
 

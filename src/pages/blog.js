@@ -28,7 +28,31 @@ const Blog = () => {
   return (
     <Layout>
       <Head title='Blog' />
+      <div className={styles.pageTitle}>
+        <h1>All Posts</h1>
+      </div>
       <div className={styles.blog}>
+        <ol className={styles.posts}>
+          {
+            data.allContentfulBlogPost.edges.map(({ node }) => {
+              const { title, author, slug, publishedDate, description } = node;
+              return (
+                <li
+                  className={styles.post}
+                  key={node.id}
+                >
+                  <Link to={`/blog/${slug}`} className={styles.post} key={node.id}>
+                    <h1>{title}</h1>
+                    <small>Published on {publishedDate} by {author}</small>
+                    {
+                      description && <p>{description}</p>
+                    }
+                  </Link>
+                </li>
+              )
+            })
+          }
+        </ol>
         <div className={styles.categories}>
           <h2>Search by category</h2>
           <ul>
@@ -49,24 +73,6 @@ const Blog = () => {
             </li>
           </ul>
         </div>
-        <ol className={styles.posts}>
-          {
-            data.allContentfulBlogPost.edges.map(({ node }) => {
-              const { title, author, slug, publishedDate, description } = node;
-              return (
-                <li className={styles.post} key={node.id}>
-                  <Link to={`/blog/${slug}`} className={styles.post} key={node.id}>
-                    <h1>{title}</h1>
-                    <small>Published on {publishedDate} by {author}</small>
-                    {
-                      description && <p>{description}</p>
-                    }
-                  </Link>
-                </li>
-              )
-            })
-          }
-        </ol>
       </div>
     </Layout>
   )

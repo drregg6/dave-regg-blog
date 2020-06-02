@@ -19,14 +19,16 @@
   display: flex;
   justify-content: space-between;
   margin-top: 2.5rem;
+}
 
-  .next {
-    padding: 1rem;
-    background: yellow;
-  }
-  .last {
-    padding: 1rem;
-    background: salmon;
+.button {
+  border: 1px solid black;
+  padding: 1rem;
+  transition: .15s all;
+
+  &:hover {
+    background: #ff5700;
+    color: #fff;
   }
 }
 

@@ -66,7 +66,7 @@ const Post = ({ data, pageContext }) => {
         <div>
         {
             prev ? (
-              <Link to={`/blog/${prev.slug}`} className={`${styles.prev} ${styles.button}`}>Prev Post</Link>
+              <Link to={`/blog/post/${prev.slug}`} className={`${styles.prev} ${styles.button}`}>Prev Post</Link>
             ) : (
               'First Post'
             )
@@ -75,7 +75,7 @@ const Post = ({ data, pageContext }) => {
         <div>
           {
             next ? (
-              <Link to={`/blog/${next.slug}`} className={`${styles.next} ${styles.button}`}>Next Post</Link>
+              <Link to={`/blog/post/${next.slug}`} className={`${styles.next} ${styles.button}`}>Next Post</Link>
             ) : (
               'Latest Post'
             )

@@ -54,7 +54,7 @@ const Blog = ({ data, pageContext }) => {
                     <div className={styles.postHeader}>
                       <span>{publishedDate}</span><span className={styles.category}>{capitalize(category)}</span>
                     </div>
-                    <Link to={`/blog/${slug}`}>
+                    <Link to={`/blog/post/${slug}`}>
                       <h1 className={styles.postTitle}>{title}</h1>
                     </Link>
                     <p className={styles.postDesc}>{desc}</p>

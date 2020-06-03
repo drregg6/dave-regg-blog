@@ -16,7 +16,7 @@ const Card = ({
 }) => {
   return (
     <div className={styles.card} key={id}>
-      <Link to={`/blog/${slug}`} className={styles.image}>
+      <Link to={`/blog/post/${slug}`} className={styles.image}>
         <img src={src} alt="" />
         <div className={styles.category}>
           {capitalize(category)}

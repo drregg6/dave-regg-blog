@@ -34,7 +34,9 @@ export const query = graphql`
   }
 `;
 
-const Post = ({ data }) => {
+const Post = ({ data, pageContext }) => {
+  const { prev, next } = pageContext;
+  console.log(pageContext)
   const { title, author, publishedDate, body, splashImage } = data.contentfulBlogPost;
   const options = {
     renderNode: {
@@ -63,10 +65,22 @@ const Post = ({ data }) => {
       </div>
       <div className={styles.postLinks}>
         <div>
-          <Link to="/blog" className={`${styles.last} ${styles.button}`}>Last Post</Link>
+        {
+            prev ? (
+              <Link to={`/blog/${prev.slug}`} className={`${styles.prev} ${styles.button}`}>Prev Post</Link>
+            ) : (
+              'First Post'
+            )
+          }
         </div>
         <div>
-          <Link to="/blog" className={`${styles.next} ${styles.button}`}>Next Post</Link>
+          {
+            next ? (
+              <Link to={`/blog/${next.slug}`} className={`${styles.next} ${styles.button}`}>Next Post</Link>
+            ) : (
+              'Latest Post'
+            )
+          }
         </div>
       </div>
     </Layout>

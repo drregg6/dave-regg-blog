@@ -36,7 +36,6 @@ export const query = graphql`
 
 const Post = ({ data, pageContext }) => {
   const { prev, next } = pageContext;
-  console.log(pageContext)
   const { title, author, publishedDate, body, splashImage } = data.contentfulBlogPost;
   const options = {
     renderNode: {

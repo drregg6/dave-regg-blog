@@ -6,6 +6,9 @@ module.exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
   const postTemplate = path.resolve(`./src/templates/post.js`);
   const blogTemplate = path.resolve(`./src/templates/blog.js`);
+  const categoryTemplate = path.resolve(`./src/templates/category.js`)
+
+
 
   // Create Post page
   const postPages = await graphql(`
@@ -33,6 +36,8 @@ module.exports.createPages = async ({ graphql, actions }) => {
     })
   });
 
+
+
   // Create Blog page
   const blogPages = await graphql(`
     query {
@@ -49,9 +54,11 @@ module.exports.createPages = async ({ graphql, actions }) => {
     }
   `);
 
+
+
   const blogPosts = blogPages.data.allContentfulBlogPost.edges;
-  const chunks = _.chunk(blogPosts, PAGE_SIZE);
-  chunks.forEach((_, idx) => {
+  const blogChunks = _.chunk(blogPosts, PAGE_SIZE);
+  blogChunks.forEach((_, idx) => {
     createPage({
       path: idx === 0 ? `/blog` : `/blog/page/${idx+1}`,
       component: blogTemplate,
@@ -59,8 +66,38 @@ module.exports.createPages = async ({ graphql, actions }) => {
         limit: PAGE_SIZE,
         skip: idx * PAGE_SIZE,
         currentPage: idx+1,
-        next: idx === chunks.length-1 ? null : `/blog/page/${idx+2}`,
+        next: idx === blogChunks.length-1 ? null : `/blog/page/${idx+2}`,
         prev: idx === 0 ? null : idx === 1 ? `/blog` : `/blog/page/${idx}`
+      }
+    })
+  })
+
+  // Create Category Page
+  const categoryPages = await graphql(`
+    query {
+      allContentfulBlogPost(sort: {fields: createdAt, order: ASC}) {
+        edges {
+          node {
+            category
+          }
+        }
+      }
+    }
+  `)
+  const categoryPosts = categoryPages.data.allContentfulBlogPost.edges;
+  const catChunks = _.chunk(categoryPosts, PAGE_SIZE);
+  console.log(catChunks);
+  catChunks.forEach((chunk, idx) => {
+    const category = chunk[0].node.category;
+    createPage({
+      path: idx === 0 ? `/blog/category/${category}` : `/blog/category/${category}/${idx+1}`,
+      component: categoryTemplate,
+      context: {
+        limit: PAGE_SIZE,
+        skip: idx * PAGE_SIZE,
+        currentPage: idx+1,
+        next: idx === catChunks.length-1 ? null : `/blog/category//${category}/${idx+2}`,
+        prev: idx === 0 ? null : idx === 1 ? `/blog/category/${category}` : `/blog/category/${category}/${idx}`
       }
     })
   })

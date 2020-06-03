@@ -1,11 +1,9 @@
 /*
 
 https://gooyaabitemplates.com/flamingo-blogger-template-2/
-https://www.gatsbyjs.org/docs/adding-pagination/
 
 TODO:
-= Blog Page styles
-= Blog Page pagination
+= Style Pagination
 = Category functionality
     - Organize by category
 = Categories on Blog Page

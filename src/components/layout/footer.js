@@ -57,6 +57,9 @@ const Footer = () => {
           </h2>
           <ul className={`${styles.categories} ${styles.list}`}>
             <li>
+              <Link to="/blog">All</Link>
+            </li>
+            <li>
               <Link to="/blog">Programming</Link>
             </li>
             <li>

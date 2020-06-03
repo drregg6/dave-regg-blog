@@ -5,6 +5,7 @@ import {
   Link
 } from 'gatsby';
 import styles from './blog.module.scss';
+import { capitalize } from '../helpers/strHelper';
 
 import Head from '../components/meta/head';
 import Layout from '../components/layout/layout';
@@ -15,11 +16,11 @@ const Blog = () => {
       allContentfulBlogPost(sort: {fields: createdAt, order: DESC}) {
         edges {
           node {
-            author
             publishedDate(formatString: "DD MMM YYYY")
             slug
             title
             description
+            category
           }
         }
       }
@@ -35,19 +36,23 @@ const Blog = () => {
         <ol className={styles.posts}>
           {
             data.allContentfulBlogPost.edges.map(({ node }) => {
-              const { title, author, slug, publishedDate, description } = node;
+              let desc;
+              if (node.description) {
+                desc = node.description;
+              } else {
+                desc = 'If you would like to read this post, please follow the post link!';
+              }
+              const { title, slug, publishedDate, category } = node;
               return (
-                <li
-                  className={styles.post}
-                  key={node.id}
-                >
-                  <Link to={`/blog/${slug}`} className={styles.post} key={node.id}>
-                    <h1>{title}</h1>
-                    <small>Published on {publishedDate} by {author}</small>
-                    {
-                      description && <p>{description}</p>
-                    }
+                <li className={styles.post} key={node.id}>
+                  <div className={styles.postHeader}>
+                    <span>{publishedDate}</span><span className={styles.category}>{capitalize(category)}</span>
+                  </div>
+                  <Link to={`/blog/${slug}`}>
+                    <h1 className={styles.postTitle}>{title}</h1>
                   </Link>
+                  <p className={styles.postDesc}>{desc}</p>
+                  <Link to={`/blog/${slug}`} className={styles.postRead}>Read it here</Link>
                 </li>
               )
             })

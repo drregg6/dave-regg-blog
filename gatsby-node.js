@@ -85,6 +85,26 @@ module.exports.createPages = async ({ graphql, actions }) => {
     }
   `)
   const categoryPosts = categoryPages.data.allContentfulBlogPost.edges;
+  categoryPosts.forEach(({ node }) => {
+    createPage({
+      path: `/blog/category/${node.category}`,
+      component: categoryTemplate,
+      context: {
+        category: node.category
+      }
+    })
+  });
+}
+
+
+/*
+Searches incorrectly 
+-------------------
+paginates, then separates(?)
+somethings wrong with the pagination
+
+
+  const categoryPosts = categoryPages.data.allContentfulBlogPost.edges;
   const catChunks = _.chunk(categoryPosts, PAGE_SIZE);
   console.log(catChunks);
   catChunks.forEach((chunk, idx) => {
@@ -96,9 +116,9 @@ module.exports.createPages = async ({ graphql, actions }) => {
         limit: PAGE_SIZE,
         skip: idx * PAGE_SIZE,
         currentPage: idx+1,
-        next: idx === catChunks.length-1 ? null : `/blog/category//${category}/${idx+2}`,
+        next: idx === catChunks.length-1 ? null : `/blog/category/${category}/${idx+2}`,
         prev: idx === 0 ? null : idx === 1 ? `/blog/category/${category}` : `/blog/category/${category}/${idx}`
       }
     })
   })
-}
+*/

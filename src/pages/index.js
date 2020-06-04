@@ -4,14 +4,19 @@ https://gooyaabitemplates.com/flamingo-blogger-template-2/
 
 TODO:
 = Style Pagination
-= Category functionality
-    - Organize by category
-= Categories on Blog Page
+= Pagination on Category pages
+= Separate category sidebar into separate component
+    - Add to Post template
 = Universal styles
+    - Color scheme
+    - Images and fonts
+    - Padding and margin classes
+    - Styling classes
+= Combine Blog template and Category template scss modules
 
-DOWN THE LINE:
-= Keywords functionality
-= Search by keyword
+DOWN THE LINE
+= Desc functionality (elasticlunr)
+= Search by desc / title
 
 */
 

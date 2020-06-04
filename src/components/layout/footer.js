@@ -60,19 +60,19 @@ const Footer = () => {
               <Link to="/blog">All</Link>
             </li>
             <li>
-              <Link to="/blog">Programming</Link>
+              <Link to="/blog/category/programming">Programming</Link>
             </li>
             <li>
-              <Link to="/blog">Meta</Link>
+              <Link to="/blog/category/meta">Meta</Link>
             </li>
             <li>
-              <Link to="/blog">Work</Link>
+              <Link to="/blog/category/work">Work</Link>
             </li>
             <li>
-              <Link to="/blog">Mental Health</Link>
+              <Link to="/blog/category/mental">Mental Health</Link>
             </li>
             <li>
-              <Link to="/blog">Other Hobbies</Link>
+              <Link to="/blog/category/hobbies">Other Hobbies</Link>
             </li>
           </ul>
         </div>

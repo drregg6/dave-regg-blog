@@ -10,12 +10,10 @@ import Head from '../components/meta/head';
 import Layout from '../components/layout/layout';
 
 export const data = graphql`
-  query ($skip: Int, $limit: Int, $category: String) {
+  query ($category: String) {
     allContentfulBlogPost(
       sort: {fields: createdAt, order: DESC}
       filter: { category: { eq: $category } }
-      limit: $limit
-      skip: $skip
     ) {
       edges {
         node {
@@ -31,12 +29,11 @@ export const data = graphql`
 `
 
 const Category = ({ data, pageContext }) => {
-  const { next, prev } = pageContext;
   return (
     <Layout>
       <Head title='Blog' />
       <div className={styles.pageTitle}>
-        <h1>All Posts</h1>
+        <h1>{capitalize(pageContext.category)} Posts</h1>
       </div>
       <div className={styles.blog}>
         <ol className={styles.posts}>
@@ -71,41 +68,24 @@ const Category = ({ data, pageContext }) => {
           <h2>Search by category</h2>
           <ul>
             <li>
-              <Link to="/blog">Programming</Link>
+              <Link to="/blog">All</Link>
             </li>
             <li>
-              <Link to="/blog">Meta</Link>
+              <Link to="/blog/category/programming">Programming</Link>
             </li>
             <li>
-              <Link to="/blog">Work</Link>
+              <Link to="/blog/category/meta">Meta</Link>
             </li>
             <li>
-              <Link to="/blog">Mental health</Link>
+              <Link to="/blog/category/work">Work</Link>
             </li>
             <li>
-              <Link to="/blog">Other hobbies</Link>
+              <Link to="/blog/category/mental">Mental health</Link>
+            </li>
+            <li>
+              <Link to="/blog/category/hobbies">Other hobbies</Link>
             </li>
           </ul>
-        </div>
-      </div>
-      <div className={styles.pagination}>
-        <div>
-        {
-            prev ? (
-              <Link to={`${prev}`} className={`${styles.prev} ${styles.button}`}>Prev Page</Link>
-            ) : (
-              'First Page'
-            )
-          }
-        </div>
-        <div>
-          {
-            next ? (
-              <Link to={`${next}`} className={`${styles.next} ${styles.button}`}>Next Page</Link>
-            ) : (
-              'Last Page'
-            )
-          }
         </div>
       </div>
     </Layout>

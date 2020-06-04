@@ -58,7 +58,7 @@ const Blog = ({ data, pageContext }) => {
                       <h1 className={styles.postTitle}>{title}</h1>
                     </Link>
                     <p className={styles.postDesc}>{desc}</p>
-                    <Link to={`/blog/${slug}`} className={styles.postRead}>Read it here</Link>
+                    <Link to={`/blog/post/${slug}`} className={styles.postRead}>Read it here</Link>
                   </li>
                   <hr />
                 </>
@@ -70,19 +70,22 @@ const Blog = ({ data, pageContext }) => {
           <h2>Search by category</h2>
           <ul>
             <li>
-              <Link to="/blog">Programming</Link>
+              <Link to="/blog">All</Link>
             </li>
             <li>
-              <Link to="/blog">Meta</Link>
+              <Link to="/blog/category/programming">Programming</Link>
             </li>
             <li>
-              <Link to="/blog">Work</Link>
+              <Link to="/blog/category/meta">Meta</Link>
             </li>
             <li>
-              <Link to="/blog">Mental health</Link>
+              <Link to="/blog/category/work">Work</Link>
             </li>
             <li>
-              <Link to="/blog">Other hobbies</Link>
+              <Link to="/blog/category/mental">Mental health</Link>
+            </li>
+            <li>
+              <Link to="/blog/category/hobbies">Other hobbies</Link>
             </li>
           </ul>
         </div>

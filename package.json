@@ -12,6 +12,9 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean"
   },
+  "engines": {
+    "node": "12.3.1"
+  },
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^13.4.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.28",

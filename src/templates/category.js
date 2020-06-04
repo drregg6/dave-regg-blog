@@ -56,7 +56,7 @@ const Category = ({ data, pageContext }) => {
                       <h1 className={styles.postTitle}>{title}</h1>
                     </Link>
                     <p className={styles.postDesc}>{desc}</p>
-                    <Link to={`/blog/${slug}`} className={styles.postRead}>Read it here</Link>
+                    <Link to={`/blog/post/${slug}`} className={styles.postRead}>Read it here</Link>
                   </li>
                   <hr />
                 </>

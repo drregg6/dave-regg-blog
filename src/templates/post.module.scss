@@ -38,10 +38,8 @@
   }
   .body {
     p {
-      text-align: justify;
+      padding: 0 1rem;
+      line-height: 1.75;
     }
-  }
-  .postLinks {
-    flex-direction: column;
   }
 }

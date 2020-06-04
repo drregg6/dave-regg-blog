@@ -78,8 +78,8 @@ const Footer = () => {
         </div>
       </div>
       <p className={styles.copyright}>
-          Copyright &copy; {new Date().getFullYear()} <a href="http://www.daveregg.com" rel="noopener noreferrer" target="_blank">{author}</a>
-        </p>
+        Copyright &copy; {new Date().getFullYear()} <a href="http://www.daveregg.com" rel="noopener noreferrer" target="_blank">{author}</a> // Powered by <a href="https://www.gatsbyjs.org" rel="noopener noreferrer" target="_blank">Gatsby</a><br />
+      </p>
     </footer>
   )
 }

@@ -8,16 +8,6 @@
   justify-content: space-between;
 }
 
-.categories {
-  h2 {
-    font-size: 1rem;
-    margin-bottom: 1rem;
-  }
-
-  width: 30%;
-  height: min-content;
-}
-
 .posts {
   list-style: none;
   padding: 0;
@@ -64,18 +54,10 @@
     flex-direction: column;
   }
 
-  .categories,
   .post,
   hr,
   .pagination {
     width: 90vw;
     margin: inherit auto;
-  }
-
-  .categories {
-    order: -1;
-    border: 2px double black;
-    padding: 1rem;
-    margin-bottom: 1rem;
   }
 }

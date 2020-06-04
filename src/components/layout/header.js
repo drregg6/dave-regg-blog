@@ -18,7 +18,7 @@ const Header = (props) => {
       }
     }
   `);
-  const { src, title, isHome } = props;
+  const { src, title, isHome, isPost } = props;
   const siteTitle = data.site.siteMetadata.title;
   
   return (
@@ -38,7 +38,11 @@ const Header = (props) => {
         }}
       >
         <div>
-          <h1>{ title ? title : siteTitle }</h1>
+          {
+            !isPost && (
+              <h1>{ title ? title : siteTitle }</h1>
+            )
+          }
           { isHome && (
               <Link to="/blog" className={styles.button}>Read more &rArr;</Link>
             )

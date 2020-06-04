@@ -1,0 +1,23 @@
+.categories {
+  h2 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  width: 30%;
+  height: min-content;
+}
+
+@media only screen and (max-width: 520px) {
+  .categories {
+    width: 90vw;
+    margin: inherit auto;
+  }
+
+  .categories {
+    order: -1;
+    border: 2px double black;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+}

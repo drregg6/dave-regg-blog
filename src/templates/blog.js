@@ -8,6 +8,7 @@ import { capitalize } from '../helpers/strHelper';
 
 import Head from '../components/meta/head';
 import Layout from '../components/layout/layout';
+import CategorySidebar from '../components/blog/categorySidebar';
 
 export const data = graphql`
   query contentfulBlogPostQuery($skip: Int, $limit: Int) {
@@ -69,29 +70,7 @@ const Blog = ({ data, pageContext }) => {
             })
           }
         </ol>
-        <div className={styles.categories}>
-          <h2>Search by category</h2>
-          <ul>
-            <li>
-              <Link to="/blog">All</Link>
-            </li>
-            <li>
-              <Link to="/blog/category/programming">Programming</Link>
-            </li>
-            <li>
-              <Link to="/blog/category/meta">Meta</Link>
-            </li>
-            <li>
-              <Link to="/blog/category/work">Work</Link>
-            </li>
-            <li>
-              <Link to="/blog/category/mental">Mental health</Link>
-            </li>
-            <li>
-              <Link to="/blog/category/hobbies">Other hobbies</Link>
-            </li>
-          </ul>
-        </div>
+        <CategorySidebar />
       </div>
       <div className={styles.pagination}>
         <div>

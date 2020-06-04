@@ -53,7 +53,7 @@ const Post = ({ data, pageContext }) => {
     src = 'https://placekitten.com/g/960/400';
   }
   return (
-    <Layout src={src} title={title}>
+    <Layout src={src} isPost>
       <Head title={title} />
       <div className={styles.head}>
         <h1>{ title }</h1>

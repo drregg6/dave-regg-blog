@@ -19,7 +19,7 @@ const Card = ({
       <Link to={`/blog/post/${slug}`} className={styles.image}>
         <img src={src} alt="" />
         <div className={styles.category}>
-          {capitalize(category)}
+          <Link to={`/blog/category/${category}`}>{capitalize(category)}</Link>
         </div>
       </Link>
       <header className={styles.header}>

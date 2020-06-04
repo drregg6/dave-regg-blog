@@ -3,7 +3,7 @@ import {
   graphql,
   Link
 } from 'gatsby';
-import styles from './category.module.scss';
+import styles from './blog.module.scss';
 import { capitalize } from '../helpers/strHelper';
 
 import Head from '../components/meta/head';

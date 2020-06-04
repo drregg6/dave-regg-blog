@@ -5,7 +5,7 @@ import {
   Link
 } from 'gatsby';
 import styles from './header.module.scss';
-import utils from '../../styles/utils.module.scss';
+import utilStyles from '../../styles/utils.module.scss';
 
 import Nav from './nav';
 
@@ -24,28 +24,24 @@ const Header = (props) => {
   
   return (
     <header className={`${styles.header}`}>
-      <div className={styles.nav}>
-        <Link to="/">
-          <h1>{ siteTitle }</h1>
-        </Link>
-        <Nav />
-      </div>
+      <Nav siteTitle={siteTitle} />
       <div
-        className={styles.hero}
+        className={`${styles.hero} ${utilStyles.fullWidth} ${utilStyles.center}`}
         style={{
-          background: `url(${src})`,
+          background: `rgba(0,0,0,0.2) url(${src})`,
           backgroundSize: 'cover',
-          backgroundPosition: 'center'
+          backgroundPosition: 'center',
+          backgroundBlendMode: 'darken'
         }}
       >
-        <div>
+        <div className={`${utilStyles.jcenter}`}>
           {
             !isPost && (
-              <h1>{ title ? title : siteTitle }</h1>
+              <h1 className={`${utilStyles.title} ${utilStyles.mb2}`}>{ title ? title : siteTitle }</h1>
             )
           }
           { isHome && (
-              <Link to="/blog" className={utils.button}>Read more &rArr;</Link>
+              <Link to="/blog" className={`${utilStyles.button}`}>Read more &rArr;</Link>
             )
           }
         </div>

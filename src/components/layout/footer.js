@@ -5,7 +5,8 @@ import {
   Link
 } from 'gatsby';
 import styles from './footer.module.scss';
-import utils from '../../styles/utils.module.scss';
+import utilStyles from '../../styles/utils.module.scss';
+
 import elfie from '../../images/blog_elfie.jpeg';
 
 const Footer = () => {
@@ -20,10 +21,10 @@ const Footer = () => {
   `);
   const { author } = data.site.siteMetadata;
   return (
-    <footer className={`${styles.footer} ${utils.primaryBackground}`}>
+    <footer className={`${styles.footer} ${utilStyles.primaryBackground} ${utilStyles.fullWidth} ${utilStyles.ptb2}`}>
       <div className={styles.grid}>
         <div>
-          <h2 className={styles.header}>
+          <h2 className={`${utilStyles.mb1} ${utilStyles.normSize} ${utilStyles.jcenter}`}>
             About Me
           </h2>
           <div className={styles.about}>
@@ -34,10 +35,10 @@ const Footer = () => {
           </div>
         </div>
         <div>
-          <h2 className={styles.header}>
+          <h2 className={`${utilStyles.mb1} ${utilStyles.normSize} ${utilStyles.jcenter}`}>
             Get in Contact
           </h2>
-          <ul className={`${styles.contact} ${styles.list}`}>
+          <ul className={`${styles.contact} ${utilStyles.doubleSize}`}>
             <li>
               <a href="http://www.daveregg.com" target="_blank" rel="noopener noreferrer"><i className="fas fa-desktop"></i></a>
             </li>
@@ -53,10 +54,10 @@ const Footer = () => {
           </ul>
         </div>
         <div className={styles.categoryDiv}>
-          <h2 className={styles.header}>
+          <h2 className={`${utilStyles.mb1} ${utilStyles.normSize} ${utilStyles.jcenter}`}>
             Categories
           </h2>
-          <ul className={`${styles.categories} ${styles.list}`}>
+          <ul className={`${utilStyles.jcenter}`}>
             <li>
               <Link to="/blog">All</Link>
             </li>
@@ -78,8 +79,10 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <p className={styles.copyright}>
-        Copyright &copy; {new Date().getFullYear()} <a href="http://www.daveregg.com" rel="noopener noreferrer" target="_blank">{author}</a> || Powered by <a href="https://www.gatsbyjs.org" rel="noopener noreferrer" target="_blank">Gatsby</a><br />
+      <p className={`${utilStyles.fullWidth} ${utilStyles.jcenter} ${styles.copyright} ${utilStyles.aLittleSmaller}`}>
+        Copyright &copy; {new Date().getFullYear()} <a href="http://www.daveregg.com" rel="noopener noreferrer" target="_blank">{author}</a><br />
+        Powered by <a href="https://www.gatsbyjs.org" rel="noopener noreferrer" target="_blank">Gatsby</a><br />
+        Hero photo by <a href="https://unsplash.com/@irenedavila" rel="noopener noreferrer" target="_blank">Irene Dávila</a> on <a href="https://www.unsplash.com" rel="noopener noreferrer" target="_blank">Unsplash</a>
       </p>
     </footer>
   )

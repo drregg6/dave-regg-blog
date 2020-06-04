@@ -1,65 +1,10 @@
 .header {
-  .nav {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 1rem 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    a {
-      h1 {
-        color: #000;
-      }
-    }
-  }
-
   .hero {
-    width: 100vw;
     height: 70vh;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
     div {
-      text-align: center;
       h1 {
-        font-size: 5rem;
         color: #fff;
-        margin-bottom: 2.5rem;
-      }
-      .button {
-        font-size: 1rem;
-        background: #fff;
-        padding: .5rem 1rem;
-        border: 1px solid black;
-        border-radius: 5px;
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 520px) {
-  .header {
-    .nav {
-      padding-left: 1rem;
-      padding-right: 1rem;
-      flex-direction: column;
-
-      h1 {
-        margin-bottom: 2.5rem;
-      }
-    }
-
-    .hero {
-      div {
-        h1 {
-          font-size: 2.5rem;
-        }
-        .button {
-          font-size: .9rem;
-        }
       }
     }
   }

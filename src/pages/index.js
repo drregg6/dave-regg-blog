@@ -3,17 +3,11 @@
 https://gooyaabitemplates.com/flamingo-blogger-template-2/
 
 TODO:
-= Style Pagination
 = Pagination on Category pages
-= Separate category sidebar into separate component
-    - Add to Post template
-= Universal styles
-    - Color scheme
-    - Button class
-    - Images and fonts
-    - Padding and margin classes
-    - Styling classes
-= A more professional font
+= Add CategorySidebar to Post template
+= New color scheme
+= Distribute universal classes to Pages
+    - Delete repetitive CSS
 
 DOWN THE LINE
 = Desc functionality (elasticlunr)

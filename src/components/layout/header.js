@@ -4,7 +4,8 @@ import {
   useStaticQuery,
   Link
 } from 'gatsby';
-import styles from './header.module.scss'
+import styles from './header.module.scss';
+import utils from '../../styles/utils.module.scss';
 
 import Nav from './nav';
 
@@ -22,7 +23,7 @@ const Header = (props) => {
   const siteTitle = data.site.siteMetadata.title;
   
   return (
-    <header className={styles.header}>
+    <header className={`${styles.header}`}>
       <div className={styles.nav}>
         <Link to="/">
           <h1>{ siteTitle }</h1>
@@ -44,7 +45,7 @@ const Header = (props) => {
             )
           }
           { isHome && (
-              <Link to="/blog" className={styles.button}>Read more &rArr;</Link>
+              <Link to="/blog" className={utils.button}>Read more &rArr;</Link>
             )
           }
         </div>

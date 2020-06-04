@@ -5,6 +5,7 @@ import {
 } from 'gatsby';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import styles from './post.module.scss';
+import utils from '../styles/utils.module.scss';
 
 import Head from '../components/meta/head';
 import Layout from '../components/layout/layout';
@@ -66,7 +67,7 @@ const Post = ({ data, pageContext }) => {
         <div>
         {
             prev ? (
-              <Link to={`/blog/post/${prev.slug}`} className={`${styles.prev} ${styles.button}`}>Prev Post</Link>
+              <Link to={`/blog/post/${prev.slug}`} className={`${styles.prev} ${utils.button}`}>Prev Post</Link>
             ) : (
               'First Post'
             )
@@ -75,7 +76,7 @@ const Post = ({ data, pageContext }) => {
         <div>
           {
             next ? (
-              <Link to={`/blog/post/${next.slug}`} className={`${styles.next} ${styles.button}`}>Next Post</Link>
+              <Link to={`/blog/post/${next.slug}`} className={`${styles.next} ${utils.button}`}>Next Post</Link>
             ) : (
               'Latest Post'
             )

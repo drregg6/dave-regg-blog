@@ -5,6 +5,7 @@ import {
   Link
 } from 'gatsby';
 import styles from './footer.module.scss';
+import utils from '../../styles/utils.module.scss';
 import elfie from '../../images/blog_elfie.jpeg';
 
 const Footer = () => {
@@ -19,7 +20,7 @@ const Footer = () => {
   `);
   const { author } = data.site.siteMetadata;
   return (
-    <footer className={styles.footer}>
+    <footer className={`${styles.footer} ${utils.primaryBackground}`}>
       <div className={styles.grid}>
         <div>
           <h2 className={styles.header}>
@@ -78,7 +79,7 @@ const Footer = () => {
         </div>
       </div>
       <p className={styles.copyright}>
-        Copyright &copy; {new Date().getFullYear()} <a href="http://www.daveregg.com" rel="noopener noreferrer" target="_blank">{author}</a> // Powered by <a href="https://www.gatsbyjs.org" rel="noopener noreferrer" target="_blank">Gatsby</a><br />
+        Copyright &copy; {new Date().getFullYear()} <a href="http://www.daveregg.com" rel="noopener noreferrer" target="_blank">{author}</a> || Powered by <a href="https://www.gatsbyjs.org" rel="noopener noreferrer" target="_blank">Gatsby</a><br />
       </p>
     </footer>
   )

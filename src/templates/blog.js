@@ -4,6 +4,7 @@ import {
   Link
 } from 'gatsby';
 import styles from './blog.module.scss';
+import utils from '../styles/utils.module.scss';
 import { capitalize } from '../helpers/strHelper';
 
 import Head from '../components/meta/head';
@@ -76,7 +77,7 @@ const Blog = ({ data, pageContext }) => {
         <div>
         {
             prev ? (
-              <Link to={`${prev}`} className={`${styles.prev} ${styles.button}`}>Prev Page</Link>
+              <Link to={`${prev}`} className={`${styles.prev} ${utils.button}`}>Prev Page</Link>
             ) : (
               'First Page'
             )
@@ -85,7 +86,7 @@ const Blog = ({ data, pageContext }) => {
         <div>
           {
             next ? (
-              <Link to={`${next}`} className={`${styles.next} ${styles.button}`}>Next Page</Link>
+              <Link to={`${next}`} className={`${styles.next} ${utils.button}`}>Next Page</Link>
             ) : (
               'Last Page'
             )

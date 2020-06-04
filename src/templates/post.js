@@ -5,7 +5,7 @@ import {
 } from 'gatsby';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import styles from './post.module.scss';
-import utils from '../styles/utils.module.scss';
+import utilStyles from '../styles/utils.module.scss';
 
 import Head from '../components/meta/head';
 import Layout from '../components/layout/layout';
@@ -19,7 +19,7 @@ export const query = graphql`
     ) {
       title
       author
-      publishedDate (formatString: "MMMM Do, YYYY")
+      publishedDate (formatString: "DD MMM YYYY")
       body {
         json
       }
@@ -56,18 +56,18 @@ const Post = ({ data, pageContext }) => {
   return (
     <Layout src={src} isPost>
       <Head title={title} />
-      <div className={styles.head}>
-        <h1>{ title }</h1>
-        <small>Published on { publishedDate } by { author }</small>
+      <div className={`${utilStyles.mb3}`}>
+        <h1 className={`${utilStyles.title} ${utilStyles.doubleSize}`}>{ title }</h1>
+        <p className={`${utilStyles.subtitle} ${utilStyles.normSize}`}>Published on { publishedDate } by { author }</p>
       </div>
-      <div className={styles.body}>
+      <div className={`${styles.body} ${utilStyles.normSize}`}>
         { documentToReactComponents(body.json, options) }
       </div>
-      <div className={styles.postLinks}>
+      <div className={`${utilStyles.mt3} ${styles.postLinks}`}>
         <div>
         {
             prev ? (
-              <Link to={`/blog/post/${prev.slug}`} className={`${styles.prev} ${utils.button}`}>Prev Post</Link>
+              <Link to={`/blog/post/${prev.slug}`} className={`${utilStyles.button}`}>Prev Post</Link>
             ) : (
               'First Post'
             )
@@ -76,7 +76,7 @@ const Post = ({ data, pageContext }) => {
         <div>
           {
             next ? (
-              <Link to={`/blog/post/${next.slug}`} className={`${styles.next} ${utils.button}`}>Next Post</Link>
+              <Link to={`/blog/post/${next.slug}`} className={`${utilStyles.button}`}>Next Post</Link>
             ) : (
               'Latest Post'
             )

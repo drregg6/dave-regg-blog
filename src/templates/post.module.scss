@@ -1,9 +1,5 @@
-.head {
-  margin: 2.5rem 0;
-}
-
 .body {
-  line-height: 1.2;
+  line-height: 1.6;
   p,
   h1,
   h2,
@@ -18,18 +14,6 @@
 .postLinks {
   display: flex;
   justify-content: space-between;
-  margin-top: 2.5rem;
-}
-
-.button {
-  border: 1px solid black;
-  padding: 1rem;
-  transition: .15s all;
-
-  &:hover {
-    background: #ff5700;
-    color: #fff;
-  }
 }
 
 @media only screen and (max-width: 520px) {

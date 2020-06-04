@@ -4,7 +4,7 @@ import {
   Link
 } from 'gatsby';
 import styles from './blog.module.scss';
-import utils from '../styles/utils.module.scss';
+import utilStyles from '../styles/utils.module.scss';
 import { capitalize } from '../helpers/strHelper';
 
 import Head from '../components/meta/head';
@@ -36,8 +36,8 @@ const Blog = ({ data, pageContext }) => {
   return (
     <Layout>
       <Head title='Blog' />
-      <div className={styles.pageTitle}>
-        <h1>All Posts</h1>
+      <div className={`${utilStyles.mb1} ${utilStyles.jcenter}`}>
+        <h1 className={`${utilStyles.doubleSize}`}>All Posts</h1>
       </div>
       <div className={styles.blog}>
         <ol className={styles.posts}>
@@ -52,15 +52,15 @@ const Blog = ({ data, pageContext }) => {
               const { title, slug, publishedDate, category } = node;
               return (
                 <>
-                  <li className={styles.post} key={node.id}>
+                  <li className={`${utilStyles.mtb2} ${styles.post}`} key={node.id}>
                     <div className={styles.postHeader}>
                       <span>{publishedDate}</span>
-                      <span className={styles.category}>
+                      <span>
                         <Link to={`/blog/category/${category}`}>{capitalize(category)}</Link>
                       </span>
                     </div>
                     <Link to={`/blog/post/${slug}`}>
-                      <h1 className={styles.postTitle}>{title}</h1>
+                      <h1 className={`${utilStyles.aLittleLarger} ${utilStyles.primaryText}`}>{title}</h1>
                     </Link>
                     <p className={styles.postDesc}>{desc}</p>
                     <Link to={`/blog/post/${slug}`} className={styles.postRead}>Read it here</Link>
@@ -73,11 +73,11 @@ const Blog = ({ data, pageContext }) => {
         </ol>
         <CategorySidebar />
       </div>
-      <div className={styles.pagination}>
+      <div className={`${styles.pagination} ${utilStyles.mt1}`}>
         <div>
         {
             prev ? (
-              <Link to={`${prev}`} className={`${styles.prev} ${utils.button}`}>Prev Page</Link>
+              <Link to={`${prev}`} className={`${styles.prev} ${utilStyles.button}`}>Prev Page</Link>
             ) : (
               'First Page'
             )
@@ -86,7 +86,7 @@ const Blog = ({ data, pageContext }) => {
         <div>
           {
             next ? (
-              <Link to={`${next}`} className={`${styles.next} ${utils.button}`}>Next Page</Link>
+              <Link to={`${next}`} className={`${styles.next} ${utilStyles.button}`}>Next Page</Link>
             ) : (
               'Last Page'
             )

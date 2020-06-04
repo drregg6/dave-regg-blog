@@ -4,6 +4,7 @@ import {
   Link
 } from 'gatsby';
 import styles from './blog.module.scss';
+import utilStyles from '../styles/utils.module.scss';
 import { capitalize } from '../helpers/strHelper';
 
 import Head from '../components/meta/head';
@@ -33,8 +34,8 @@ const Category = ({ data, pageContext }) => {
   return (
     <Layout>
       <Head title='Blog' />
-      <div className={styles.pageTitle}>
-        <h1>{capitalize(pageContext.category)} Posts</h1>
+      <div className={`${utilStyles.mb1} ${utilStyles.jcenter}`}>
+        <h1 className={`${utilStyles.doubleSize}`}>{capitalize(pageContext.category)} Posts</h1>
       </div>
       <div className={styles.blog}>
         <ol className={styles.posts}>
@@ -49,12 +50,13 @@ const Category = ({ data, pageContext }) => {
               const { title, slug, publishedDate, category } = node;
               return (
                 <>
-                  <li className={styles.post} key={node.id}>
+                  <li className={`${utilStyles.mtb2} ${styles.post}`} key={node.id}>
                     <div className={styles.postHeader}>
-                      <span>{publishedDate}</span><span className={styles.category}>{capitalize(category)}</span>
+                      <span>{publishedDate}</span>
+                      <span>{capitalize(category)}</span>
                     </div>
                     <Link to={`/blog/post/${slug}`}>
-                      <h1 className={styles.postTitle}>{title}</h1>
+                      <h1 className={`${utilStyles.aLittleLarger} ${utilStyles.primaryText}`}>{title}</h1>
                     </Link>
                     <p className={styles.postDesc}>{desc}</p>
                     <Link to={`/blog/post/${slug}`} className={styles.postRead}>Read it here</Link>

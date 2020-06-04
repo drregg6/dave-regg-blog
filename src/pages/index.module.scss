@@ -1,3 +1,5 @@
+@import '../styles/colors.scss';
+
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -8,12 +10,8 @@
 }
 
 .readMore {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 2px double black;
-  // background: #8a8a8a;
-  transition: .15s background;
+  border: 3px double $black-color;
+  transition: .2s background;
 
   &:hover {
     background: #f7f7f7;

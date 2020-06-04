@@ -244,19 +244,19 @@
     color: $primary-color;
   }
   .subtitle {
-    font-size: 2rem;
-  }
-  .normSize {
-    font-size: 1.25rem;
-  }
-  .aLittleLarger {
     font-size: 1.75rem;
   }
+  .normSize {
+    font-size: 1rem;
+  }
+  .aLittleLarger {
+    font-size: 1.5rem;
+  }
   .doubleSize {
-    font-size: 2.25rem;
+    font-size: 2rem;
   }
   .aLittleSmaller {
-    font-size: .9rem;
+    font-size: .7rem;
   }
 
   .button {

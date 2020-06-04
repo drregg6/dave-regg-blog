@@ -4,10 +4,8 @@ https://gooyaabitemplates.com/flamingo-blogger-template-2/
 
 TODO:
 = Pagination on Category pages
-= Add CategorySidebar to Post template
+= Add CategorySidebar to Post template(?)
 = New color scheme
-= Distribute universal classes to Pages
-    - Delete repetitive CSS
 
 DOWN THE LINE
 = Desc functionality (elasticlunr)
@@ -22,6 +20,7 @@ import {
   Link
 } from 'gatsby';
 import styles from './index.module.scss';
+import utilStyles from '../styles/utils.module.scss';
 
 import Head from '../components/meta/head';
 import Layout from '../components/layout/layout';
@@ -73,7 +72,7 @@ export default function Home() {
             )
           })
         }
-        <Link to="/blog" className={styles.readMore}>
+        <Link to="/blog" className={`${styles.readMore} ${utilStyles.center} ${utilStyles.lightBackground}`}>
           Check out earlier posts
         </Link>
       </div>

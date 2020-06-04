@@ -7,7 +7,7 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import styles from './post.module.scss';
 import utilStyles from '../styles/utils.module.scss';
 
-import Head from '../components/meta/head';
+import SEO from '../components/meta/seo';
 import Layout from '../components/layout/layout';
 
 export const query = graphql`
@@ -19,6 +19,7 @@ export const query = graphql`
     ) {
       title
       author
+      description
       publishedDate (formatString: "DD MMM YYYY")
       body {
         json
@@ -37,7 +38,7 @@ export const query = graphql`
 
 const Post = ({ data, pageContext }) => {
   const { prev, next } = pageContext;
-  const { title, author, publishedDate, body, splashImage } = data.contentfulBlogPost;
+  const { title, author, publishedDate, body, splashImage, description } = data.contentfulBlogPost;
   const options = {
     renderNode: {
       "embedded-asset-block": (node) => {
@@ -55,7 +56,11 @@ const Post = ({ data, pageContext }) => {
   }
   return (
     <Layout src={src} isPost>
-      <Head title={title} />
+      <SEO
+        title={title}
+        description={description}
+        image={splashImage}
+      />
       <div className={`${utilStyles.mb3}`}>
         <h1 className={`${utilStyles.title} ${utilStyles.doubleSize}`}>{ title }</h1>
         <p className={`${utilStyles.subtitle} ${utilStyles.normSize}`}>Published on { publishedDate } by { author }</p>

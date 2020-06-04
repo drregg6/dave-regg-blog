@@ -1,9 +1,11 @@
+import '../../utils/fontawesome';
 import React from 'react';
 import {
   graphql,
   useStaticQuery,
   Link
 } from 'gatsby';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from './footer.module.scss';
 import utilStyles from '../../styles/utils.module.scss';
 
@@ -40,16 +42,16 @@ const Footer = () => {
           </h2>
           <ul className={`${styles.contact} ${utilStyles.doubleSize}`}>
             <li>
-              <a href="http://www.daveregg.com" target="_blank" rel="noopener noreferrer"><i className="fas fa-desktop"></i></a>
+              <a href="http://www.daveregg.com" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={'desktop'} /></a>
             </li>
             <li>
-              <a href="https://www.twitter.com/daveregg" target="_blank" rel="noopener noreferrer"><i className="fab fa-twitter-square"></i></a>
+              <a href="https://www.twitter.com/daveregg" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={['fab', 'twitter-square']} /></a>
             </li>
             <li>
-              <a href="https://www.linkedin.com/in/daveregg" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin"></i></a>
+              <a href="https://www.linkedin.com/in/daveregg" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={['fab', 'linkedin']} /></a>
             </li>
             <li>
-              <a href="https://github.com/drregg6" target="_blank" rel="noopener noreferrer"><i className="fab fa-github-square"></i></a>
+              <a href="https://github.com/drregg6" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={['fab', 'github-square']} /></a>
             </li>
           </ul>
         </div>

@@ -7,7 +7,7 @@ import styles from './blog.module.scss';
 import utilStyles from '../styles/utils.module.scss';
 import { capitalize } from '../helpers/strHelper';
 
-import Head from '../components/meta/head';
+import SEO from '../components/meta/seo';
 import Layout from '../components/layout/layout';
 import CategorySidebar from '../components/blog/categorySidebar';
 
@@ -35,7 +35,7 @@ const Blog = ({ data, pageContext }) => {
   const { next, prev } = pageContext;
   return (
     <Layout>
-      <Head title='Blog' />
+      <SEO title='Blog' />
       <div className={`${utilStyles.mb1} ${utilStyles.jcenter}`}>
         <h1 className={`${utilStyles.doubleSize}`}>All Posts</h1>
       </div>

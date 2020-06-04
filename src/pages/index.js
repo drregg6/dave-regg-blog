@@ -22,7 +22,7 @@ import {
 import styles from './index.module.scss';
 import utilStyles from '../styles/utils.module.scss';
 
-import Head from '../components/meta/head';
+import SEO from '../components/meta/seo';
 import Layout from '../components/layout/layout';
 import Card from '../components/homepage/card';
 
@@ -48,10 +48,9 @@ export default function Home() {
       }
     }
   `)
-  console.log(data);
   return (
     <Layout isHome>
-      <Head title='Home' />
+      <SEO title='Home' />
       <div className={styles.cards}>
         {
           data.allContentfulBlogPost.edges.map(({ node }) => {

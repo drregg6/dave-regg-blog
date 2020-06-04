@@ -2,11 +2,12 @@ import React from 'react';
 import { Link } from 'gatsby';
 
 import styles from './categorySidebar.module.scss';
+import utilStyles from '../../styles/utils.module.scss';
 
 const CategorySidebar = () => {
   return (
     <div className={styles.categories}>
-      <h2>Search by category</h2>
+      <h2 className={`${utilStyles.normSize} ${utilStyles.mb1}`}>Search by category</h2>
       <ul>
         <li>
           <Link to="/blog">All</Link>

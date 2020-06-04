@@ -21,10 +21,9 @@
     }
 
     div {
-      width: 25vw;
       h2 {
         padding: .5rem 2rem;
-        border: 2px double white;
+        border: 3px double $white-color;
       }
       .contact {
         display: flex;

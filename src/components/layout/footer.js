@@ -23,7 +23,7 @@ const Footer = () => {
   return (
     <footer className={`${styles.footer} ${utilStyles.primaryBackground} ${utilStyles.fullWidth} ${utilStyles.ptb2}`}>
       <div className={styles.grid}>
-        <div>
+        <div className={`${utilStyles.quarterWidth}`}>
           <h2 className={`${utilStyles.mb1} ${utilStyles.normSize} ${utilStyles.jcenter}`}>
             About Me
           </h2>
@@ -34,7 +34,7 @@ const Footer = () => {
             </p>
           </div>
         </div>
-        <div>
+        <div className={`${utilStyles.quarterWidth}`}>
           <h2 className={`${utilStyles.mb1} ${utilStyles.normSize} ${utilStyles.jcenter}`}>
             Get in Contact
           </h2>
@@ -53,7 +53,7 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className={styles.categoryDiv}>
+        <div className={`${utilStyles.quarterWidth} ${styles.categoryDiv}`}>
           <h2 className={`${utilStyles.mb1} ${utilStyles.normSize} ${utilStyles.jcenter}`}>
             Categories
           </h2>

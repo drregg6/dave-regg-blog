@@ -1,7 +1,6 @@
-.card {
-  width: 25vw;
+@import '../../styles/colors.scss';
 
-  &:hover {
+.card {&:hover {
     .image {
       img {
         opacity: .7;
@@ -17,44 +16,30 @@
     width: 360px;
     height: 256px;
 
-    transition: .15s opacity;
+    transition: .2s opacity;
   }
 }
 
 .category {
-  font-size: .75rem;
-  position: absolute;
   width: fit-content;
+
+  position: absolute;
   bottom: -.75rem;
   left: 0;
   right: 0;
   margin-left: auto;
   margin-right: auto;
   
-  border: 3px double black;
+  border: 3px double $black-color;
   padding: .5rem 2rem;
-  background: white;
-
-  color: black;
 }
 
 .header {
-  margin: 2rem auto;
-  text-align: center;
-
-  .title {
-    font-size: 1.5rem;
-  }
   .info {
     display: flex;
     justify-content: space-between;
-    margin-top: 1rem;
-    font-style: italic;
-    font-size: .8rem;
-
-    small {
-      font-size: .8rem;
-      color: #8a8a8a;
+    p {
+      color: $cold-color;
     }
   }
 }

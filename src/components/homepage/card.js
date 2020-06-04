@@ -3,6 +3,7 @@ import { Link } from 'gatsby';
 import { capitalize } from '../../helpers/strHelper';
 
 import styles from './card.module.scss';
+import utilStyles from '../../styles/utils.module.scss';
 
 const Card = ({
   id,
@@ -15,20 +16,22 @@ const Card = ({
   src
 }) => {
   return (
-    <div className={styles.card} key={id}>
+    <div className={`${styles.card} ${utilStyles.quarterWidth}`} key={id}>
       <Link to={`/blog/post/${slug}`} className={styles.image}>
         <img src={src} alt={description} title={title} />
-        <div className={styles.category}>
+        <div className={`${utilStyles.lightBackground} ${utilStyles.aLittleSmaller} ${styles.category}`}>
           <Link to={`/blog/category/${category}`}>{capitalize(category)}</Link>
         </div>
       </Link>
-      <header className={styles.header}>
-        <Link to={`/blog/${slug}`}><h1 className={styles.title}>{title}</h1></Link>
-        <div className={styles.info}>
-          <p>
+      <header className={`${styles.header} ${utilStyles.jcenter} ${utilStyles.mtb2}`}>
+        <Link to={`/blog/${slug}`}>
+          <h1 className={`${utilStyles.aLittleLarger} ${utilStyles.primaryText}`}>{title}</h1>
+        </Link>
+        <div className={`${styles.info} ${utilStyles.mt1}`}>
+          <p className={`${utilStyles.italic} ${utilStyles.aLittleSmaller}`}>
             {author}
           </p>
-          <small>
+          <small className={`${utilStyles.italic} ${utilStyles.aLittleSmaller}`}>
             {publishedDate}
           </small>
         </div>

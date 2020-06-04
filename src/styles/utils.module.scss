@@ -12,6 +12,9 @@
 .halfWidth {
   width: 50vw;
 }
+.quarterWidth {
+  width: 25vw;
+}
 
 
 /* text */
@@ -67,8 +70,17 @@
 .cold {
   color: $cold-color;
 }
+
+
+/* background */
 .primaryBackground {
   background: $primary-color;
+}
+.lightBackground {
+  background: $white-color;
+}
+.darkBackground {
+  background: $black-color;
 }
 
 
@@ -216,7 +228,7 @@
 /* custom */
 .button {
   padding: .5rem 1rem;
-  border: 2px double $black-color;
+  border: 3px double $black-color;
   background: $white-color;
   color: $secondary-color;
   transition: .2s all;

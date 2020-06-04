@@ -1,9 +1,4 @@
 .categories {
-  h2 {
-    font-size: 1rem;
-    margin-bottom: 1rem;
-  }
-
   width: 30%;
   height: min-content;
 }
@@ -12,9 +7,6 @@
   .categories {
     width: 90vw;
     margin: inherit auto;
-  }
-
-  .categories {
     order: -1;
     border: 2px double black;
     padding: 1rem;

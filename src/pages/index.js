@@ -9,11 +9,11 @@ TODO:
     - Add to Post template
 = Universal styles
     - Color scheme
+    - Button class
     - Images and fonts
     - Padding and margin classes
     - Styling classes
-= Combine Blog template and Category template scss modules
-= Index Page category should have a separate link to category page
+= A more professional font
 
 DOWN THE LINE
 = Desc functionality (elasticlunr)

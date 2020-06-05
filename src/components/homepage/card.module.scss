@@ -21,10 +21,7 @@
 }
 
 .category {
-  width: intrinsic;
-  width: -moz-fit-content;
-  width: -webkit-fit-content;
-  width: fit-content;
+  width: min-content;
 
   position: absolute;
   bottom: -.75rem;

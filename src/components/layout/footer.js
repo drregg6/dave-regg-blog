@@ -32,7 +32,7 @@ const Footer = () => {
           <div className={styles.about}>
             <img src={elfie} alt="Custom yellow elfie" />
             <p>
-              Follow along as I teach myself how to program in Javascript! I write creating and writing my own pet projects. This means the code it takes, the technologies I learn, and the frustrations I overcome. I also write about struggles dealing with being self-taught, finding a job, and juggling life, a fulltime job, and mental health issues.
+              Follow along as I teach myself how to program in Javascript! I write creating and writing my own pet projects. This means the code it takes, the technologies I learn, and the frustrations I overcome. I also write about struggles dealing with being self-taught, finding a job, and juggling life, a fulltime job, and my own mental health.
             </p>
           </div>
         </div>

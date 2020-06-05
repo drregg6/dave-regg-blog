@@ -25,7 +25,7 @@ const Footer = () => {
   return (
     <footer className={`${styles.footer} ${utilStyles.primaryBackground} ${utilStyles.fullWidth} ${utilStyles.ptb2}`}>
       <div className={styles.grid}>
-        <div className={`${utilStyles.quarterWidth}`}>
+        <div className={`${styles.section} ${utilStyles.quarterWidth}`}>
           <h2 className={`${utilStyles.mb1} ${utilStyles.normSize} ${utilStyles.jcenter}`}>
             About Me
           </h2>
@@ -36,26 +36,26 @@ const Footer = () => {
             </p>
           </div>
         </div>
-        <div className={`${utilStyles.quarterWidth}`}>
+        <div className={`${styles.section} ${utilStyles.quarterWidth}`}>
           <h2 className={`${utilStyles.mb1} ${utilStyles.normSize} ${utilStyles.jcenter}`}>
             Get in Contact
           </h2>
           <ul className={`${styles.contact} ${utilStyles.doubleSize}`}>
             <li>
-              <a href="http://www.daveregg.com" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={'desktop'} /></a>
+              <a href="http://www.daveregg.com/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={'desktop'} /></a>
             </li>
             <li>
-              <a href="https://www.twitter.com/daveregg" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={['fab', 'twitter-square']} /></a>
+              <a href="https://www.twitter.com/daveregg/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={['fab', 'twitter-square']} /></a>
             </li>
             <li>
-              <a href="https://www.linkedin.com/in/daveregg" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={['fab', 'linkedin']} /></a>
+              <a href="https://www.linkedin.com/in/daveregg/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={['fab', 'linkedin']} /></a>
             </li>
             <li>
-              <a href="https://github.com/drregg6" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={['fab', 'github-square']} /></a>
+              <a href="https://github.com/drregg6/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={['fab', 'github-square']} /></a>
             </li>
           </ul>
         </div>
-        <div className={`${utilStyles.quarterWidth} ${styles.categoryDiv}`}>
+        <div className={`${styles.section} ${utilStyles.quarterWidth} ${styles.categoryDiv}`}>
           <h2 className={`${utilStyles.mb1} ${utilStyles.normSize} ${utilStyles.jcenter}`}>
             Categories
           </h2>

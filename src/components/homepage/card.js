@@ -24,7 +24,7 @@ const Card = ({
         </div>
       </Link>
       <header className={`${styles.header} ${utilStyles.jcenter} ${utilStyles.mtb2}`}>
-        <Link to={`/blog/${slug}`}>
+        <Link to={`/blog/post/${slug}`}>
           <h1 className={`${utilStyles.aLittleLarger} ${utilStyles.primaryText}`}>{title}</h1>
         </Link>
         <div className={`${styles.info} ${utilStyles.mt1}`}>

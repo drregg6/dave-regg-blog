@@ -21,7 +21,7 @@ const SEO = ({ description, lang, meta, image: metaImage, title }) => {
   `)
 
   const metaDescription = description || site.siteMetadata.description;
-  const image = metaImage && metaImage.src ? `https:${metaImage.src.fixed.src}` : null;
+  const image = metaImage && metaImage.src ? `http:${metaImage.src.fixed.src}` : null;
   console.log(image)
   return (
     <Helmet

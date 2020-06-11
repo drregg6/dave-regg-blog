@@ -10,7 +10,7 @@ module.exports = {
     author: 'Dave Regg',
     description: 'A personal blog created, designed, and coded by Dave Regg. The blog is about technology and Dave Regg\'s experience teaching himself how to program.',
     url: 'http://www.daveregg.com',
-    twitterUsername: '@daveregg',
+    twitterUsername: '@DaveRegg',
     keywords: ['developer', 'programmer', 'javascript', 'programming', 'software', 'engineer', 'frontend', 'backend', 'fullstack', 'gatsbyjs', 'nextjs', 'reactjs', 'expressjs', 'mongodb', 'nodejs', 'blog', 'life']
   },
   plugins: [

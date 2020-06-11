@@ -1,5 +1,6 @@
 /*
 
+Design ideas thanks to:
 https://gooyaabitemplates.com/flamingo-blogger-template-2/
 
 TODO:

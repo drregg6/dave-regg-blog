@@ -59,7 +59,9 @@ const Post = ({ data, pageContext }) => {
       <SEO
         title={title}
         description={description}
-        image={splashImage}
+        image={{
+          src: splashImage
+        }}
       />
       <div className={`${utilStyles.mb3}`}>
         <h1 className={`${utilStyles.title} ${utilStyles.doubleSize}`}>{ title }</h1>

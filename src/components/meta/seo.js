@@ -21,7 +21,8 @@ const SEO = ({ description, lang, meta, image: metaImage, title }) => {
   `)
 
   const metaDescription = description || site.siteMetadata.description;
-  const image = metaImage && metaImage.src ? `${site.siteMetadata.siteUrl}${metaImage.src}` : null;
+  const image = metaImage && metaImage.src ? `${metaImage.src.fixed.src}` : null;
+  console.log(image)
   return (
     <Helmet
     htmlAttributes={{ lang }}
@@ -69,11 +70,11 @@ const SEO = ({ description, lang, meta, image: metaImage, title }) => {
           },
           {
             property: `og:image:width`,
-            content: metaImage.width
+            content: metaImage.src.fixed.width
           },
           {
             property: `og:image:height`,
-            content: metaImage.height
+            content: metaImage.src.fixed.height
           },
           {
             name: `twitter:card`,

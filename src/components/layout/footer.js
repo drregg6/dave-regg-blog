@@ -83,7 +83,6 @@ const Footer = () => {
       </div>
       <p className={`${utilStyles.fullWidth} ${utilStyles.jcenter} ${styles.copyright} ${utilStyles.aLittleSmaller}`}>
         Copyright &copy; {new Date().getFullYear()} <a href="http://www.daveregg.com" rel="noopener noreferrer" target="_blank">{author}</a><br />
-        Powered by <a href="https://www.gatsbyjs.org" rel="noopener noreferrer" target="_blank">Gatsby</a><br />
         Hero photo by <a href="https://unsplash.com/@irenedavila" rel="noopener noreferrer" target="_blank">Irene Dávila</a> on <a href="https://www.unsplash.com" rel="noopener noreferrer" target="_blank">Unsplash</a>
       </p>
     </footer>

@@ -3,7 +3,9 @@ import {
   graphql,
   Link
 } from 'gatsby';
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import {
+  documentToReactComponents
+} from '@contentful/rich-text-react-renderer';
 import styles from './post.module.scss';
 import utilStyles from '../styles/utils.module.scss';
 

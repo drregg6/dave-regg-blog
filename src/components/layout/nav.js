@@ -17,7 +17,7 @@ const Nav = ({ siteTitle }) => {
           <Link to="/blog">Blog</Link>
         </li>
         <li>
-          <a href="http://www.daveregg.com" target="_blank" rel="noopener noreferrer">Portfolio</a>
+          <a href="http://www.daveregg.com">Portfolio</a>
         </li>
       </ul>
     </div>

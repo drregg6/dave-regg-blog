@@ -44,7 +44,7 @@ To-do list:
 * Include pagination to Category Blog template
 
 ## Status
-Project is: _launched_ and to some degree completed, but not perfected. Check the [Todo List](#features). Check out the Live project here - [Dave Regg's Blog](https://distracted-hugle-a414f1.netlify.app/)
+Project is: _launched_ and to some degree completed, but not perfected. Check the [Todo List](#features). Check out the Live project here - [Dave Regg's Blog](https://blog.daveregg.com)
 
 ## Inspiration
 The design is inspired by [this template on Gooyaabi](https://gooyaabitemplates.com/flamingo-blogger-template-2/)
@@ -55,4 +55,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ## Contact
 Dave Regg - [@daveregg](https://www.twitter.com/daveregg) - dave.r.regg@gmail.com
 
-Project Link: [Dave Regg's Blog Live](https://distracted-hugle-a414f1.netlify.app/) and [Dave Regg's Blog Code](https://github.com/drregg6/dave-regg-blog)
+Project Link: [Dave Regg's Blog Live](https://blog.daveregg.com) and [Dave Regg's Blog Code](https://github.com/drregg6/dave-regg-blog)

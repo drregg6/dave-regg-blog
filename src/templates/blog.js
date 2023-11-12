@@ -14,7 +14,7 @@ import CategorySidebar from '../components/blog/categorySidebar';
 export const data = graphql`
   query contentfulBlogPostQuery($skip: Int, $limit: Int) {
     allContentfulBlogPost(
-      sort: {fields: createdAt, order: DESC}
+      sort: {createdAt: DESC}
       limit: $limit
       skip: $skip
     ) {

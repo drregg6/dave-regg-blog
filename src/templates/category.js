@@ -14,7 +14,7 @@ import CategorySidebar from '../components/blog/categorySidebar';
 export const data = graphql`
   query ($category: String) {
     allContentfulBlogPost(
-      sort: {fields: createdAt, order: DESC}
+      sort: {createdAt: DESC}
       filter: { category: { eq: $category } }
     ) {
       edges {

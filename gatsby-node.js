@@ -13,7 +13,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
   // Create Post page
   const postPages = await graphql(`
     query {
-      allContentfulBlogPost(sort: {fields: createdAt, order: ASC}) {
+      allContentfulBlogPost(sort: {createdAt: ASC}) {
         edges {
           node {
             slug
@@ -42,7 +42,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
   const blogPages = await graphql(`
     query {
       allContentfulBlogPost(
-        sort: { fields: createdAt, order: DESC },
+        sort: { createdAt: DESC },
         limit: 1000
       ) {
         edges {
@@ -75,7 +75,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
   // Create Category Page
   const categoryPages = await graphql(`
     query {
-      allContentfulBlogPost(sort: {fields: createdAt, order: ASC}) {
+      allContentfulBlogPost(sort: {createdAt: ASC}) {
         edges {
           node {
             category

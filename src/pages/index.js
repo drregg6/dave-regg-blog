@@ -30,7 +30,7 @@ import Card from '../components/homepage/card';
 export default function Home() {
   const data = useStaticQuery(graphql`
     query {
-      allContentfulBlogPost(limit: 5, sort: {fields: createdAt, order: DESC}) {
+      allContentfulBlogPost(limit: 5, sort: {createdAt: DESC}) {
         edges {
           node {
             author

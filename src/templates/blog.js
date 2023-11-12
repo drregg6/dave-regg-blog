@@ -3,8 +3,8 @@ import {
   graphql,
   Link
 } from 'gatsby';
-import styles from './blog.module.scss';
-import utilStyles from '../styles/utils.module.scss';
+import * as styles from './blog.module.scss';
+import * as utilStyles from '../styles/utils.module.scss';
 import { capitalize } from '../helpers/strHelper';
 
 import SEO from '../components/meta/seo';
@@ -63,7 +63,7 @@ const Blog = ({ data, pageContext }) => {
                       <h1 className={`${utilStyles.aLittleLarger} ${utilStyles.primaryText}`}>{title}</h1>
                     </Link>
                     <p className={styles.postDesc}>{desc}</p>
-                    <Link to={`/blog/post/${slug}`} className={styles.postRead}>Read it here</Link>
+                    <Link to={`/blog/post/${slug}`}>Read it here</Link>
                   </li>
                   <hr />
                 </>
@@ -77,7 +77,7 @@ const Blog = ({ data, pageContext }) => {
         <div>
         {
             prev ? (
-              <Link to={`${prev}`} className={`${styles.prev} ${utilStyles.button}`}>Prev Page</Link>
+              <Link to={`${prev}`} className={`${utilStyles.button}`}>Prev Page</Link>
             ) : (
               'First Page'
             )
@@ -86,7 +86,7 @@ const Blog = ({ data, pageContext }) => {
         <div>
           {
             next ? (
-              <Link to={`${next}`} className={`${styles.next} ${utilStyles.button}`}>Next Page</Link>
+              <Link to={`${next}`} className={`${utilStyles.button}`}>Next Page</Link>
             ) : (
               'Last Page'
             )

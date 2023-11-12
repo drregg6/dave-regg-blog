@@ -3,8 +3,8 @@ import {
   graphql,
   Link
 } from 'gatsby';
-import styles from './blog.module.scss';
-import utilStyles from '../styles/utils.module.scss';
+import * as styles from './blog.module.scss';
+import * as utilStyles from '../styles/utils.module.scss';
 import { capitalize } from '../helpers/strHelper';
 
 import SEO from '../components/meta/seo';
@@ -59,7 +59,7 @@ const Category = ({ data, pageContext }) => {
                       <h1 className={`${utilStyles.aLittleLarger} ${utilStyles.primaryText}`}>{title}</h1>
                     </Link>
                     <p className={styles.postDesc}>{desc}</p>
-                    <Link to={`/blog/post/${slug}`} className={styles.postRead}>Read it here</Link>
+                    <Link to={`/blog/post/${slug}`}>Read it here</Link>
                   </li>
                   <hr />
                 </>

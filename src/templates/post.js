@@ -3,11 +3,11 @@ import {
   graphql,
   Link
 } from 'gatsby';
-import {
-  documentToReactComponents
-} from '@contentful/rich-text-react-renderer';
-import styles from './post.module.scss';
-import utilStyles from '../styles/utils.module.scss';
+import { getImage } from "gatsby-plugin-image";
+
+import { renderRichText } from 'gatsby-source-contentful/rich-text'
+import * as styles from './post.module.scss';
+import * as utilStyles from '../styles/utils.module.scss';
 
 import SEO from '../components/meta/seo';
 import Layout from '../components/layout/layout';
@@ -24,15 +24,10 @@ export const query = graphql`
       description
       publishedDate (formatString: "DD MMM YYYY")
       body {
-        json
+        raw
       }
       splashImage {
-        fixed(width: 960) {
-          src
-          srcSet
-          width
-          height
-        }
+        gatsbyImageData(width: 960)
       }
     }
   }
@@ -50,19 +45,19 @@ const Post = ({ data, pageContext }) => {
       }
     }
   }
-  let src = '';
+  let image = '';
   if (splashImage) {
-    src = splashImage.fixed.src;
+    image = getImage(splashImage);
   } else {
-    src = 'https://placekitten.com/g/960/400';
+    image = 'https://placekitten.com/g/960/400';
   }
   return (
-    <Layout src={src} isPost>
+    <Layout image={image} isPost>
       <SEO
         title={title}
         description={description}
         image={{
-          src: splashImage
+          image: splashImage
         }}
       />
       <div className={`${utilStyles.mb3}`}>
@@ -70,7 +65,7 @@ const Post = ({ data, pageContext }) => {
         <p className={`${utilStyles.subtitle} ${utilStyles.normSize}`}>Published on { publishedDate } by { author }</p>
       </div>
       <div className={`${styles.body} ${utilStyles.normSize}`}>
-        { documentToReactComponents(body.json, options) }
+        { renderRichText(body.raw, options) }
       </div>
       <div className={`${utilStyles.mt3} ${styles.postLinks}`}>
         <div>

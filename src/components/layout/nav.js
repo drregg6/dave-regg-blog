@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import styles from './nav.module.scss';
-import utilStyles from '../../styles/utils.module.scss';
+import * as styles from './nav.module.scss';
+import * as utilStyles from '../../styles/utils.module.scss';
 
 const Nav = ({ siteTitle }) => {
   return (

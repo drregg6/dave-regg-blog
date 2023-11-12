@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-import styles from './categorySidebar.module.scss';
-import utilStyles from '../../styles/utils.module.scss';
+import * as styles from './categorySidebar.module.scss';
+import * as utilStyles from '../../styles/utils.module.scss';
 
 const CategorySidebar = () => {
   return (

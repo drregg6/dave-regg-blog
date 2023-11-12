@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { capitalize } from '../../helpers/strHelper';
+import { GatsbyImage } from "gatsby-plugin-image";
 
-import styles from './card.module.scss';
-import utilStyles from '../../styles/utils.module.scss';
+import * as styles from './card.module.scss';
+import * as utilStyles from '../../styles/utils.module.scss';
 
 const Card = ({
   id,
@@ -13,12 +14,12 @@ const Card = ({
   title,
   category,
   description,
-  src
+  image
 }) => {
   return (
     <div className={`${styles.card} ${utilStyles.quarterWidth}`} key={id}>
       <Link to={`/blog/post/${slug}`} className={styles.image}>
-        <img src={src} alt={description} title={title} />
+        <GatsbyImage image={image} alt={description} title={title} />
         <div className={`${utilStyles.lightBackground} ${utilStyles.aLittleSmaller} ${styles.category}`}>
           <Link to={`/blog/category/${category}`}>{capitalize(category)}</Link>
         </div>

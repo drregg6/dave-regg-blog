@@ -20,8 +20,9 @@ import {
   useStaticQuery,
   Link
 } from 'gatsby';
-import styles from './index.module.scss';
-import utilStyles from '../styles/utils.module.scss';
+import { getImage } from "gatsby-plugin-image";
+import * as styles from './index.module.scss';
+import * as utilStyles from '../styles/utils.module.scss';
 
 import SEO from '../components/meta/seo';
 import Layout from '../components/layout/layout';
@@ -40,9 +41,7 @@ export default function Home() {
             publishedDate(formatString: "DD MMM YYYY")
             description
             splashImage {
-              fixed {
-                src
-              }
+              gatsbyImageData(width: 360)
             }
           }
         }
@@ -55,7 +54,7 @@ export default function Home() {
       <div className={styles.cards}>
         {
           data.allContentfulBlogPost.edges.map(({ node }) => {
-            const src = node.splashImage ? node.splashImage.fixed.src : 'https://www.placehold.it/400x300';
+            const image = node.splashImage ? getImage(node.splashImage) : 'https://www.placehold.it/400x300';
             const { id, author, slug, publishedDate, title, category, description } = node;
             return (
               <Card
@@ -67,7 +66,7 @@ export default function Home() {
                 title={title}
                 category={category}
                 description={description}
-                src={src}
+                image={image}
               />
             )
           })

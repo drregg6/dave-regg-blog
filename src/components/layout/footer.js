@@ -6,8 +6,8 @@ import {
   Link
 } from 'gatsby';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import styles from './footer.module.scss';
-import utilStyles from '../../styles/utils.module.scss';
+import * as styles from './footer.module.scss';
+import * as utilStyles from '../../styles/utils.module.scss';
 
 import elfie from '../../images/blog_elfie.jpeg';
 
@@ -25,7 +25,7 @@ const Footer = () => {
   return (
     <footer className={`${styles.footer} ${utilStyles.primaryBackground} ${utilStyles.fullWidth} ${utilStyles.ptb2}`}>
       <div className={styles.grid}>
-        <div className={`${styles.section} ${utilStyles.quarterWidth}`}>
+        <div className={`${utilStyles.quarterWidth}`}>
           <h2 className={`${utilStyles.mb1} ${utilStyles.normSize} ${utilStyles.jcenter}`}>
             About Me
           </h2>
@@ -36,7 +36,7 @@ const Footer = () => {
             </p>
           </div>
         </div>
-        <div className={`${styles.section} ${utilStyles.quarterWidth}`}>
+        <div className={`${utilStyles.quarterWidth}`}>
           <h2 className={`${utilStyles.mb1} ${utilStyles.normSize} ${utilStyles.jcenter}`}>
             Get in Contact
           </h2>
@@ -55,7 +55,7 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className={`${styles.section} ${utilStyles.quarterWidth} ${styles.categoryDiv}`}>
+        <div className={`${utilStyles.quarterWidth} ${styles.categoryDiv}`}>
           <h2 className={`${utilStyles.mb1} ${utilStyles.normSize} ${utilStyles.jcenter}`}>
             Categories
           </h2>

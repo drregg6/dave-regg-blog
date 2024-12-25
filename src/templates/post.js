@@ -65,9 +65,8 @@ const Post = ({ data, pageContext }) => {
   } else {
     image = "https://placekitten.com/g/960/400"
   }
-  console.log(`From post.js: ${JSON.stringify(image)}`)
   return (
-    <Layout image={image} isPost>
+    <Layout image={image} title={title} isPost>
       <div className={`${utilStyles.mb3}`}>
         <h1 className={`${utilStyles.title} ${utilStyles.doubleSize}`}>
           {title}

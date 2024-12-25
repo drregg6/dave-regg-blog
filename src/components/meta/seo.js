@@ -9,6 +9,7 @@ const SEO = ({ title, description, image, path }) => {
         siteMetadata {
           title
           author
+          description
           url
           keywords
           twitterUsername
@@ -33,6 +34,7 @@ const SEO = ({ title, description, image, path }) => {
       </title>
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
+      <meta name="url" content={seo.url} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={seo.title} />
       <meta name="twitter:url" content={seo.url} />

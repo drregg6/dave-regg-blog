@@ -13,7 +13,7 @@
     "clean": "gatsby clean"
   },
   "engines": {
-    "node": "16.8.0"
+    "node": "18.16.1"
   },
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^15.17.0",
@@ -35,7 +35,6 @@
     "node-sass": "^9.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-helmet": "^6.1.0",
     "react-typography": "^0.16.23",
     "typography": "^0.16.24",
     "typography-theme-st-annes": "^0.16.19"

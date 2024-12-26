@@ -1,4 +1,4 @@
-@import "./variables.scss";
+@use "variables";
 
 html {
   line-height: 1.6;
@@ -28,10 +28,10 @@ li {
 
 a {
   text-decoration: none;
-  color: $secondary-color;
+  color: variables.$secondary-color;
 }
 a:hover {
-  color: $secondary-light;
+  color: variables.$secondary-light;
 }
 img {
   margin: 0 auto;

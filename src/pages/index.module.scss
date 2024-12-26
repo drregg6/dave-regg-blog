@@ -1,4 +1,4 @@
-@import "../styles/variables.scss";
+@use "../styles/variables";
 
 .cards {
   display: grid;
@@ -10,11 +10,11 @@
 }
 
 .readMore {
-  border: 3px double $black-color;
-  transition: 0.2s background;
+  border: 3px double variables.$black-color;
+  transition: background-color 0.2s;
 
   &:hover {
-    background: #f7f7f7;
+    background-color: #f7f7f7;
   }
 }
 

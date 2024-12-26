@@ -1,4 +1,4 @@
-@import "../../styles/variables.scss";
+@use "../../styles/variables";
 
 .footer {
   .grid {
@@ -23,7 +23,7 @@
     div {
       h2 {
         padding: 0.5rem 2rem;
-        border: 3px double $white-color;
+        border: 3px double variables.$white-color;
       }
       .contact {
         display: flex;
@@ -31,10 +31,10 @@
 
         li {
           a {
-            color: $splash-color;
+            color: variables.$splash-color;
             transition: 0.2s all;
             &:hover {
-              color: $warm-color;
+              color: variables.$warm-color;
             }
           }
         }

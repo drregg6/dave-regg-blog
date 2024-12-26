@@ -1,4 +1,4 @@
-@import "../styles/variables.scss";
+@use "../styles/variables";
 
 .post {
   line-height: 1.6;
@@ -26,8 +26,8 @@
   }
   code {
     padding: 0.15rem 0.15rem;
-    background: $black-color;
-    color: $primary-pale;
+    background: variables.$black-color;
+    color: variables.$primary-pale;
   }
   .postImgWr {
     display: flex;

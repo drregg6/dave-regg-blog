@@ -1,4 +1,4 @@
-@import "../../styles/variables.scss";
+@use "../../styles/variables";
 
 .header {
   .hero {
@@ -39,7 +39,7 @@
   }
 }
 
-@media only screen and (max-width: $width-sm) {
+@media only screen and (max-width: variables.$width-sm) {
   .header {
     .hero {
       .titleWr {

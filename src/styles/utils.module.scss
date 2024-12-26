@@ -1,4 +1,4 @@
-@import "./variables.scss";
+@use "./variables";
 
 /* layout */
 .center {
@@ -28,7 +28,7 @@
 }
 .title {
   font-size: 5rem;
-  color: $primary-color;
+  color: variables.$primary-color;
 }
 .subtitle {
   font-size: 3rem;
@@ -55,30 +55,30 @@
   font-size: 0.75rem;
 }
 .primaryText {
-  color: $primary-color;
+  color: variables.$primary-color;
 }
 .primaryLight {
-  color: $primary-light;
+  color: variables.$primary-light;
 }
 .primaryPale {
-  color: $primary-pale;
+  color: variables.$primary-pale;
 }
 .warm {
-  color: $warm-color;
+  color: variables.$warm-color;
 }
 .cold {
-  color: $cold-color;
+  color: variables.$cold-color;
 }
 
 /* background */
 .primaryBackground {
-  background: $primary-color;
+  background: variables.$primary-color;
 }
 .lightBackground {
-  background: $white-color;
+  background: variables.$white-color;
 }
 .darkBackground {
-  background: $black-color;
+  background: variables.$black-color;
 }
 
 /* margin */
@@ -210,31 +210,31 @@
   cursor: pointer;
 }
 .clickable {
-  color: $splash-color;
+  color: variables.$splash-color;
 
   &:hover {
-    color: $warm-color;
+    color: variables.$warm-color;
   }
 }
 
 /* custom */
 .button {
   padding: 0.5rem 1rem;
-  border: 3px double $black-color;
-  background: $white-color;
-  color: $secondary-color;
+  border: 3px double variables.$black-color;
+  background: variables.$white-color;
+  color: variables.$secondary-color;
   transition: 0.2s all;
 
   &:hover {
-    color: $secondary-light;
+    color: variables.$secondary-light;
   }
 }
 
 /* Small - md screens */
-@media only screen and (max-width: $width-sm) {
+@media only screen and (max-width: variables.$width-sm) {
   .title {
     font-size: 2.5rem;
-    color: $primary-color;
+    color: variables.$primary-color;
   }
   .subtitle {
     font-size: 1.75rem;

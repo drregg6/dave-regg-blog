@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
-import { StaticImage, GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 import heroImage1 from "../../images/hero-images/hero-background-1.jpg"
 import heroImage2 from "../../images/hero-images/hero-background-2.jpg"
@@ -34,14 +34,14 @@ const Header = ({ image, title, isHome }) => {
           <img
             className={`${styles.backgroundImage}`}
             src={src}
-            alt="Hero Image"
+            alt="Homepage Hero"
           />
         ) : (
           <GatsbyImage
             className={`${styles.backgroundImage}`}
             layout="fullWidth"
             aspectRatio={2 / 1}
-            alt="Post Hero Image"
+            alt="Post Hero"
             image={image}
             formats={["auto", "webp", "avif", "jpg"]}
           />

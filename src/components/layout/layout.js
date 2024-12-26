@@ -5,7 +5,7 @@ import * as utilStyles from "../../styles/utils.module.scss"
 import Header from "./header"
 import Footer from "./footer"
 
-const Layout = ({ isHome, isPost, title, image, children }) => {
+const Layout = ({ isHome, title, image, children }) => {
   return (
     <div className={`${styles.container} ${utilStyles.fullWidth}`}>
       <div className={styles.content}>

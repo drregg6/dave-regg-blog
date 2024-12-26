@@ -2,10 +2,18 @@ import React from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import { StaticImage, GatsbyImage } from "gatsby-plugin-image"
 
+import heroImage1 from "../../images/hero-images/hero-background-1.jpg"
+import heroImage2 from "../../images/hero-images/hero-background-2.jpg"
+import heroImage3 from "../../images/hero-images/hero-background-3.jpg"
+import heroImage4 from "../../images/hero-images/hero-background-4.jpg"
+
 import * as styles from "./header.module.scss"
 import * as utilStyles from "../../styles/utils.module.scss"
 
 import Nav from "./nav"
+
+const heroImages = [heroImage1, heroImage2, heroImage3, heroImage4]
+let src = heroImages[Math.floor(Math.random() * heroImages.length)]
 
 const Header = ({ image, title, isHome }) => {
   const data = useStaticQuery(graphql`
@@ -18,25 +26,15 @@ const Header = ({ image, title, isHome }) => {
     }
   `)
   title = title || data.site.siteMetadata.title
-  const heroImages = [
-    "../../images/hero-images/hero-background-1.jpg",
-    "../../images/hero-images/hero-background-2.jpg",
-    "../../images/hero-images/hero-background-3.jpg",
-    "../../images/hero-images/hero-background-4.jpg",
-  ]
-  const src = heroImages[Math.floor(Math.random() * heroImages.length)]
   return (
     <header className={`${styles.header}`}>
       <Nav siteTitle={data.site.siteMetadata.title} />
       <div className={`${styles.hero} ${utilStyles.fullWidth}`}>
         {isHome ? (
-          <StaticImage
+          <img
             className={`${styles.backgroundImage}`}
-            layout="fullWidth"
-            aspectRatio={2 / 1}
+            src={src}
             alt="Hero Image"
-            src="../../images/hero-images/hero-background-4.jpg"
-            formats={["auto", "webp", "avif", "jpg"]}
           />
         ) : (
           <GatsbyImage

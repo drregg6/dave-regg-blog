@@ -6,6 +6,9 @@
   }
   .backgroundImage {
     grid-area: 1/1;
+    aspect-ratio: 2/1;
+    width: 100%;
+    object-fit: cover;
     max-height: 75vh;
   }
   .backgroundImage:after {

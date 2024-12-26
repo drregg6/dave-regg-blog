@@ -1,15 +1,21 @@
-import React from 'react';
-import {
-  graphql,
-  useStaticQuery,
-  Link
-} from 'gatsby';
-import styles from './header.module.scss';
-import utilStyles from '../../styles/utils.module.scss';
+import React from "react"
+import { graphql, useStaticQuery, Link } from "gatsby"
+import { GatsbyImage } from "gatsby-plugin-image"
 
-import Nav from './nav';
+import heroImage1 from "../../images/hero-images/hero-background-1.jpg"
+import heroImage2 from "../../images/hero-images/hero-background-2.jpg"
+import heroImage3 from "../../images/hero-images/hero-background-3.jpg"
+import heroImage4 from "../../images/hero-images/hero-background-4.jpg"
 
-const Header = (props) => {
+import * as styles from "./header.module.scss"
+import * as utilStyles from "../../styles/utils.module.scss"
+
+import Nav from "./nav"
+
+const heroImages = [heroImage1, heroImage2, heroImage3, heroImage4]
+let src = heroImages[Math.floor(Math.random() * heroImages.length)]
+
+const Header = ({ image, title, isHome }) => {
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -18,36 +24,44 @@ const Header = (props) => {
         }
       }
     }
-  `);
-  const { src, title, isHome, isPost } = props;
-  const siteTitle = data.site.siteMetadata.title;
-  
+  `)
+  title = title || data.site.siteMetadata.title
   return (
     <header className={`${styles.header}`}>
-      <Nav siteTitle={siteTitle} />
-      <div
-        className={`${styles.hero} ${utilStyles.fullWidth} ${utilStyles.center}`}
-        style={{
-          background: `rgba(0,0,0,0.2) url(${src})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundBlendMode: 'darken'
-        }}
-      >
-        <div className={`${utilStyles.jcenter}`}>
-          {
-            !isPost && (
-              <h1 className={`${utilStyles.title} ${utilStyles.mb2}`}>{ title ? title : siteTitle }</h1>
-            )
-          }
-          { isHome && (
-              <Link to="/blog" className={`${utilStyles.button}`}>Read more &rArr;</Link>
-            )
-          }
+      <Nav siteTitle={data.site.siteMetadata.title} />
+      <div className={`${styles.hero} ${utilStyles.fullWidth}`}>
+        {isHome ? (
+          <img
+            className={`${styles.backgroundImage}`}
+            src={src}
+            alt="Homepage Hero"
+          />
+        ) : (
+          <GatsbyImage
+            className={`${styles.backgroundImage}`}
+            layout="fullWidth"
+            aspectRatio={2 / 1}
+            alt="Post Hero"
+            image={image}
+            formats={["auto", "webp", "avif", "jpg"]}
+          />
+        )}
+        <div className={`${styles.titleWr}`}>
+          <h1 className={`${utilStyles.title} ${styles.splashTitle}`}>
+            {title}
+          </h1>
+          {isHome && (
+            <Link
+              to="/blog"
+              className={`${utilStyles.button} ${utilStyles.mt2}`}
+            >
+              Read more &rArr;
+            </Link>
+          )}
         </div>
       </div>
     </header>
   )
 }
 
-export default Header;
+export default Header

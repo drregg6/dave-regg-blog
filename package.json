@@ -2,7 +2,7 @@
   "name": "dave-regg-blog",
   "private": true,
   "description": "",
-  "version": "0.1.0",
+  "version": "2.0.0",
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
@@ -13,7 +13,7 @@
     "clean": "gatsby clean"
   },
   "engines": {
-    "node": "16.8.0"
+    "node": "18.16.1"
   },
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^15.17.0",
@@ -23,15 +23,18 @@
     "@fortawesome/react-fontawesome": "^0.2.0",
     "env-cmd": "^10.1.0",
     "gatsby": "^5.11.0",
+    "gatsby-plugin-image": "^3.12.3",
     "gatsby-plugin-manifest": "^5.11.0",
     "gatsby-plugin-react-helmet": "^6.11.0",
     "gatsby-plugin-sass": "^6.11.0",
+    "gatsby-plugin-sharp": "^5.12.3",
     "gatsby-plugin-typography": "^5.11.0",
     "gatsby-source-contentful": "^8.11.0",
+    "gatsby-source-filesystem": "^5.12.1",
+    "gatsby-transformer-sharp": "^5.12.3",
     "node-sass": "^9.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-helmet": "^6.1.0",
     "react-typography": "^0.16.23",
     "typography": "^0.16.24",
     "typography-theme-st-annes": "^0.16.19"

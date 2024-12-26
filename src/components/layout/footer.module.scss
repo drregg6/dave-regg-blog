@@ -1,4 +1,4 @@
-@import '../../styles/colors.scss';
+@use "../../styles/variables";
 
 .footer {
   .grid {
@@ -10,20 +10,20 @@
     row-gap: 2rem;
     grid-template-rows: auto;
     justify-content: center;
-    font-size: .75rem;
+    font-size: 0.75rem;
 
     .about {
       img {
         float: left;
-        padding: .5rem;
+        padding: 0.5rem;
         border-radius: 50%;
       }
     }
 
     div {
       h2 {
-        padding: .5rem 2rem;
-        border: 3px double $white-color;
+        padding: 0.5rem 2rem;
+        border: 3px double variables.$white-color;
       }
       .contact {
         display: flex;
@@ -31,10 +31,10 @@
 
         li {
           a {
-            color: $splash-color;
-            transition: .2s all;
+            color: variables.$splash-color;
+            transition: 0.2s all;
             &:hover {
-              color: $warm-color;
+              color: variables.$warm-color;
             }
           }
         }

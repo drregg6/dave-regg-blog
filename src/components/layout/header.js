@@ -49,11 +49,17 @@ const Header = ({ image, title, isHome }) => {
           />
         )}
         <div className={`${styles.titleWr}`}>
-          <h1
-            className={`${utilStyles.title} ${utilStyles.mb2} ${styles.splashTitle}`}
-          >
+          <h1 className={`${utilStyles.title} ${styles.splashTitle}`}>
             {title}
           </h1>
+          {isHome && (
+            <Link
+              to="/blog"
+              className={`${utilStyles.button} ${utilStyles.mt2}`}
+            >
+              Read more &rArr;
+            </Link>
+          )}
         </div>
       </div>
     </header>
@@ -61,28 +67,3 @@ const Header = ({ image, title, isHome }) => {
 }
 
 export default Header
-
-{
-  /* <div
-        className={`${styles.hero} ${utilStyles.fullWidth} ${utilStyles.center}`}
-        style={{
-          background: `rgba(0,0,0,0.2) url(${image})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundBlendMode: "darken",
-        }}
-      >
-        <div className={`${utilStyles.jcenter}`}>
-          {!isPost && (
-            <h1 className={`${utilStyles.title} ${utilStyles.mb2}`}>
-              {title ? title : siteTitle}
-            </h1>
-          )}
-          {isHome && (
-            <Link to="/blog" className={`${utilStyles.button}`}>
-              Read more &rArr;
-            </Link>
-          )}
-        </div>
-      </div> */
-}

@@ -1,6 +1,6 @@
-@import '../styles/colors.scss';
+@import "../styles/variables.scss";
 
-.body {
+.post {
   line-height: 1.6;
   p,
   h1,
@@ -14,7 +14,8 @@
   ol,
   ul {
     padding: 0 2rem 1rem 2rem;
-    ol, ul {
+    ol,
+    ul {
       padding: 0;
     }
     li {
@@ -24,11 +25,11 @@
     }
   }
   code {
-    padding: .25rem .5rem;
-    background: $primary-pale;
+    padding: 0.15rem 0.15rem;
+    background: $black-color;
+    color: $primary-pale;
   }
-  img {
-    width: 50%;
+  .postImgWr {
     display: flex;
   }
 }

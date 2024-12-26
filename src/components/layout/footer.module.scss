@@ -1,4 +1,4 @@
-@import '../../styles/colors.scss';
+@import "../../styles/variables.scss";
 
 .footer {
   .grid {
@@ -10,19 +10,19 @@
     row-gap: 2rem;
     grid-template-rows: auto;
     justify-content: center;
-    font-size: .75rem;
+    font-size: 0.75rem;
 
     .about {
       img {
         float: left;
-        padding: .5rem;
+        padding: 0.5rem;
         border-radius: 50%;
       }
     }
 
     div {
       h2 {
-        padding: .5rem 2rem;
+        padding: 0.5rem 2rem;
         border: 3px double $white-color;
       }
       .contact {
@@ -32,7 +32,7 @@
         li {
           a {
             color: $splash-color;
-            transition: .2s all;
+            transition: 0.2s all;
             &:hover {
               color: $warm-color;
             }

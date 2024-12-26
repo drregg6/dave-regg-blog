@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { getImage } from "gatsby-plugin-image"
 
 import { BLOCKS } from "@contentful/rich-text-types"
@@ -20,6 +21,15 @@ export const query = graphql`
       publishedDate(formatString: "DD MMM YYYY")
       body {
         raw
+        references {
+          ... on ContentfulAsset {
+            contentful_id
+            title
+            description
+            gatsbyImageData(width: 720)
+            __typename
+          }
+        }
       }
       splashImage {
         gatsbyImageData(width: 960)
@@ -48,13 +58,16 @@ const Post = ({ data, pageContext }) => {
     renderNode: {
       [BLOCKS.PARAGRAPH]: (node, children) => <p>{children}</p>,
       [BLOCKS.EMBEDDED_ASSET]: node => {
+        const { gatsbyImageData, description } = node.data.target
         return (
-          <>
-            <h2>Embedded Asset</h2>
-            <pre>
-              <code>{JSON.stringify(node, null, 2)}</code>
-            </pre>
-          </>
+          <GatsbyImage
+            className={`${styles.postImgWr} ${utilStyles.mb1}`}
+            imgClassName={`${styles.postImg}`}
+            objectFit="scale-down"
+            image={getImage(gatsbyImageData)}
+            alt={description ? description : "A really cool image"}
+            formats={["auto", "webp", "avif", "jpg"]}
+          />
         )
       },
     },
@@ -75,7 +88,7 @@ const Post = ({ data, pageContext }) => {
           Published on {publishedDate} by {author}
         </p>
       </div>
-      <div className={`${styles.body} ${utilStyles.normSize}`}>
+      <div className={`${styles.post} ${utilStyles.normSize}`}>
         {renderRichText(body, options)}
       </div>
       <div className={`${utilStyles.mt3} ${styles.postLinks}`}>

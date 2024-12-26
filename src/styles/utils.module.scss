@@ -1,4 +1,4 @@
-@import './colors.scss';
+@import "./variables.scss";
 
 /* layout */
 .center {
@@ -15,7 +15,6 @@
 .quarterWidth {
   width: 25vw;
 }
-
 
 /* text */
 .italic {
@@ -53,7 +52,7 @@
   font-size: 2rem;
 }
 .aLittleSmaller {
-  font-size: .75rem;
+  font-size: 0.75rem;
 }
 .primaryText {
   color: $primary-color;
@@ -71,7 +70,6 @@
   color: $cold-color;
 }
 
-
 /* background */
 .primaryBackground {
   background: $primary-color;
@@ -82,8 +80,6 @@
 .darkBackground {
   background: $black-color;
 }
-
-
 
 /* margin */
 .m1 {
@@ -147,8 +143,6 @@
   margin: 5rem 0;
 }
 
-
-
 /* padding */
 .p1 {
   padding: 1rem;
@@ -211,7 +205,6 @@
   padding: 5rem 0;
 }
 
-
 /* link */
 .pointer {
   cursor: pointer;
@@ -224,21 +217,21 @@
   }
 }
 
-
 /* custom */
 .button {
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   border: 3px double $black-color;
   background: $white-color;
   color: $secondary-color;
-  transition: .2s all;
+  transition: 0.2s all;
 
   &:hover {
     color: $secondary-light;
   }
 }
 
-@media only screen and (max-width: 530px) {
+/* Small - md screens */
+@media only screen and (max-width: $width-sm) {
   .title {
     font-size: 2.5rem;
     color: $primary-color;
@@ -256,10 +249,10 @@
     font-size: 2rem;
   }
   .aLittleSmaller {
-    font-size: .7rem;
+    font-size: 0.7rem;
   }
 
   .button {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
 }

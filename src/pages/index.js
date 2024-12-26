@@ -7,9 +7,9 @@ TODO:
 = Darken splash image backgrounds [x]
 = Nav title wrongfully updates with page [x]
 = Dynamically render static images []
-= Add images within blog posts (among other elements) []
+= Add images within blog posts (among other elements) [x]
 = Move category down on cards [x]
-= Remove console logs []
+= Remove console logs [x]
 = Pagination on Category pages []
 = New color scheme []
 

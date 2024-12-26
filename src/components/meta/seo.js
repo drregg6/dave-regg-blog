@@ -25,7 +25,6 @@ const SEO = ({ title, description, image, path }) => {
     url: `${site.siteMetadata.url}${path || ``}`,
     twitterUsername: site.siteMetadata.twitterUsername,
   }
-  console.log(`From seo.js: ${image}`)
   return (
     <>
       <html lang="en-US" />

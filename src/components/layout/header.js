@@ -27,7 +27,7 @@ const Header = ({ image, title, isHome }) => {
   const src = heroImages[Math.floor(Math.random() * heroImages.length)]
   return (
     <header className={`${styles.header}`}>
-      <Nav siteTitle={title} />
+      <Nav siteTitle={data.site.siteMetadata.title} />
       <div className={`${styles.hero} ${utilStyles.fullWidth}`}>
         {isHome ? (
           <StaticImage

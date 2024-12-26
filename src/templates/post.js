@@ -59,13 +59,14 @@ const Post = ({ data, pageContext }) => {
       [BLOCKS.PARAGRAPH]: (node, children) => <p>{children}</p>,
       [BLOCKS.EMBEDDED_ASSET]: node => {
         const { gatsbyImageData, description } = node.data.target
+        const imgTitle = node.data.target.title
         return (
           <GatsbyImage
             className={`${styles.postImgWr} ${utilStyles.mb1}`}
-            imgClassName={`${styles.postImg}`}
             objectFit="scale-down"
             image={getImage(gatsbyImageData)}
             alt={description ? description : "A really cool image"}
+            title={imgTitle}
             formats={["auto", "webp", "avif", "jpg"]}
           />
         )

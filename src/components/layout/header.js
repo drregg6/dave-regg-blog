@@ -28,16 +28,10 @@ const Header = ({ image, title, isHome }) => {
   return (
     <header className={`${styles.header}`}>
       <Nav siteTitle={title} />
-      <div
-        className={`${styles.hero} ${utilStyles.fullWidth}`}
-        style={{ display: "grid" }}
-      >
+      <div className={`${styles.hero} ${utilStyles.fullWidth}`}>
         {isHome ? (
           <StaticImage
-            style={{
-              gridArea: "1/1",
-              maxHeight: "74vh",
-            }}
+            className={`${styles.backgroundImage}`}
             layout="fullWidth"
             aspectRatio={2 / 1}
             alt="Hero Image"
@@ -46,10 +40,7 @@ const Header = ({ image, title, isHome }) => {
           />
         ) : (
           <GatsbyImage
-            style={{
-              gridArea: "1/1",
-              maxHeight: "74vh",
-            }}
+            className={`${styles.backgroundImage}`}
             layout="fullWidth"
             aspectRatio={2 / 1}
             alt="Post Hero Image"
@@ -57,18 +48,12 @@ const Header = ({ image, title, isHome }) => {
             formats={["auto", "webp", "avif", "jpg"]}
           />
         )}
-        <div
-          style={{
-            // By using the same grid area for both, they are stacked on top of each other
-            gridArea: "1/1",
-            position: "relative",
-            // This centers the other elements inside the hero component
-            placeItems: "center",
-            display: "grid",
-          }}
-        >
-          {/* Any content here will be centered in the component */}
-          <h1 className={`${utilStyles.title} ${utilStyles.mb2}`}>{title}</h1>
+        <div className={`${styles.titleWr}`}>
+          <h1
+            className={`${utilStyles.title} ${utilStyles.mb2} ${styles.splashTitle}`}
+          >
+            {title}
+          </h1>
         </div>
       </div>
     </header>

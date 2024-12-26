@@ -1,6 +1,27 @@
 .header {
-  div {
-    h1 {
+  .hero {
+    display: grid;
+  }
+  .backgroundImage {
+    grid-area: 1/1;
+    max-height: 75vh;
+  }
+  .backgroundImage:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.5;
+  }
+  .titleWr {
+    display: grid;
+    grid-area: 1/1;
+    place-items: center;
+    position: relative;
+    .splashTitle {
       color: #fff;
     }
   }

@@ -4,13 +4,13 @@ Design ideas thanks to:
 https://gooyaabitemplates.com/flamingo-blogger-template-2/
 
 TODO:
-= Darken splash image backgrounds
-= Dynammically render static images
-= Add images within blog posts (among other elements)
-= Move category down on cards
-= Remove console logs
-= Pagination on Category pages
-= New color scheme
+= Darken splash image backgrounds [x]
+= Dynamically render static images []
+= Add images within blog posts (among other elements) []
+= Move category down on cards []
+= Remove console logs []
+= Pagination on Category pages []
+= New color scheme []
 
 DOWN THE LINE
 = Desc functionality (elasticlunr)

@@ -2,7 +2,7 @@
   "name": "dave-regg-blog",
   "private": true,
   "description": "",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
